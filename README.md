@@ -5,6 +5,18 @@ PHPDOC-Generation is also implemented as general generation tasks like "class", 
 
 This component comes with a lot of [examples](https://github.com/stevleibelt/php_component_code_generator/tree/master/example) as well as default [factories](https://github.com/stevleibelt/php_component_code_generator/tree/master/source/Net/Bazzline/Component/CodeGenerator/Factory).
 
+# Install
+
+## Manuel
+
+    mkdir -p vendor/net_bazzline/php_component_code_generator
+    cd vendor/net_bazzline/php_component_code_generator
+    git clone https://github.com/stevleibelt/php_component_code_generator .
+
+## With [Packagist](https://packagist.org/packages/net_bazzline/php_component_code_generator)
+
+    composer require net_bazzline/php_component_code_generator:dev-master
+
 # Future Improvements
 
 * implement [automatically documentation](https://github.com/wells5609/CodeGenerator)
