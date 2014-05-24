@@ -1,4 +1,35 @@
-php_code_generator
-==================
+# PHP Code Generator
 
-php code generator
+This project aims to deliver a easy to use php code generator.
+PHPDOC-Generation is also implemented as general generation tasks like "class", "function" or "property" generation.
+
+This component comes with a lot of [examples](https://github.com/stevleibelt/php_component_code_generator/tree/master/example) as well as default [factories](https://github.com/stevleibelt/php_component_code_generator/tree/master/source/Net/Bazzline/Component/CodeGenerator/Factory).
+
+# Future Improvements
+
+* implement [automatically documentation](https://github.com/wells5609/CodeGenerator)
+* [flavour api](https://github.com/propelorm/Propel/blob/master/generator/lib/builder/om/OMBuilder.php)
+* [extend trait](https://github.com/Speicher210/CodeGenerator/blob/master/docs/php/oop/generate-trait.md)
+* [extend indention](https://github.com/Speicher210/CodeGenerator/blob/master/src/Wingu/OctopusCore/CodeGenerator/GeneratorInterface.php)
+* implement [annotation](https://github.com/Speicher210/CodeGenerator/tree/master/src/Wingu/OctopusCore/CodeGenerator/PHP/Annotation)
+* implement validation
+* use symfony console and commands
+    * add user interaction (ask if file should be overwritten/saved
+* what about something like [that](https://github.com/zetacomponents/PhpGenerator/blob/master/docs/example_general.php)
+
+# Inspired By
+
+* [php-generator](https://github.com/nette/php-generator)
+* [simple-php-code-gen](https://github.com/gotohr/simple-php-code-gen)
+* [cg-library](https://github.com/schmittjoh/cg-library)
+* [sensio generator bundle](https://github.com/sensiolabs/SensioGeneratorBundle)
+* [php-ide-stub-generator](https://github.com/racztiborzoltan/php-ide-stub-generator)
+* [php-token-reflection](https://github.com/Andrewsville/PHP-Token-Reflection)
+* [code-generator](https://github.com/Speicher210/CodeGenerator)
+
+# History
+
+* [0.0.1](https://github.com/stevleibelt/php_component_code_generator/tree/0.0.1)
+    * covered main code with tests
+    * created [examples](https://github.com/stevleibelt/php_component_code_generator/tree/0.0.1/example)
+    * created [factories](https://github.com/stevleibelt/php_component_code_generator/tree/0.0.1/source/Net/Bazzline/Component/CodeGenerator/Factory)

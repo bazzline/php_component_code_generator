@@ -1,0 +1,31 @@
+{
+    "description": "component to generate php code for class, file, method, property, constant, documentation",
+    "keywords": ["php", "generator", "phpdoc", "php code generator"],
+    "license": "LGPLv3",
+    "name": "stevleibelt/php_component_code_generator",
+    "type": "library",
+    "authors": [
+        {
+            "email": "artodeto@bazzline.net",
+            "homepage": "https://artodeto.bazzline.et",
+            "name": "Stev Leibelt",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.0.*",
+        "mockery/mockery": "dev-master",
+        "phpmd/phpmd": "1.5.0",
+        "apigen/apigen": "2.8.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Net\\Bazzline\\Component\\CodeGenerator": "source/",
+            "Test\\Net\\Bazzline\\Component\\CodeGenerator": "test/"
+        }
+    }
+}
