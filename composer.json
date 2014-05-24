@@ -2,7 +2,7 @@
     "description": "component to generate php code for class, file, method, property, constant, documentation",
     "keywords": ["php", "generator", "phpdoc", "php code generator"],
     "license": "LGPLv3",
-    "name": "stevleibelt/php_component_code_generator",
+    "name": "net_bazzline/php_component_code_generator",
     "type": "library",
     "authors": [
         {
