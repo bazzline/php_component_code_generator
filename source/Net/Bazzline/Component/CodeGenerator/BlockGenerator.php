@@ -151,8 +151,8 @@ class BlockGenerator extends AbstractContentGenerator implements LineGeneratorDe
      */
     public function startIndention()
     {
-        $this->addIndented = true;
         $this->getIndention()->increaseLevel();
+        $this->addIndented = true;
 
         return $this;
     }
@@ -163,8 +163,10 @@ class BlockGenerator extends AbstractContentGenerator implements LineGeneratorDe
      */
     public function stopIndention()
     {
-        $this->addIndented = false;
         $this->getIndention()->decreaseLevel();
+        if ($this->getIndention()->isSetToInitialLevel()) {
+            $this->addIndented = false;
+        }
 
         return $this;
     }

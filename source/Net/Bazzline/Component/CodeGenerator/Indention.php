@@ -14,11 +14,12 @@ class Indention
 {
     const FOUR_SPACES_INDENTION = '    ';
     const TAB_INDENTION = "\t";
+    const INITIAL_LEVEL = 0;
 
     /**
      * @var int
      */
-    private $level = 0;
+    private $level = self::INITIAL_LEVEL;
 
     /**
      * @var string
@@ -50,7 +51,7 @@ class Indention
      */
     public function decreaseLevel($number = 1)
     {
-        $this->level = (($this->level - $number) < 0) ? 0 : ($this->level - $number);
+        $this->level = (($this->level - $number) < self::INITIAL_LEVEL) ? self::INITIAL_LEVEL : ($this->level - $number);
 
         return $this;
     }
@@ -64,6 +65,14 @@ class Indention
         $this->level += $number;
 
         return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function isSetToInitialLevel()
+    {
+        return ($this->level === self::INITIAL_LEVEL);
     }
 
     /**
