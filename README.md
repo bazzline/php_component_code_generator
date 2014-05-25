@@ -21,6 +21,7 @@ Take a look on [ohloh.net](https://www.ohloh.net/p/php_component_code_generator)
 
 # Future Improvements
 
+* remove @tods in source code
 * implement [automatically documentation](https://github.com/wells5609/CodeGenerator)
 * [flavour api](https://github.com/propelorm/Propel/blob/master/generator/lib/builder/om/OMBuilder.php)
 * [extend trait](https://github.com/Speicher210/CodeGenerator/blob/master/docs/php/oop/generate-trait.md)

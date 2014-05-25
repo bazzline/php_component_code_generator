@@ -219,7 +219,7 @@ class MethodGeneratorTest extends GeneratorTestCase
         $generator->addParameter('foo', '', 'string');
         $generator->setName('unittest');
         $generator->markAsPublic();
-        $generator->setBody(array('return int($foo);'), 'int');
+        $generator->setBody(array('return int($foo);'), array('int'));
 
         $indention = $this->getIndention();
         $indention->increaseLevel();
