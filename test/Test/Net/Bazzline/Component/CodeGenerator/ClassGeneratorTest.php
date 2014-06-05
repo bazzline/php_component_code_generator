@@ -63,12 +63,11 @@ class ClassGeneratorTest extends GeneratorTestCase
     public function testWithExtends()
     {
         $generator = $this->getClassGenerator();
-        $generator->addExtends('\Bar\Foo');
-        $generator->addExtends('\Foo\Bar');
+        $generator->setExtends('\Bar\Foo');
         $generator->setName('UnitTest');
 
         $expectedString =
-            'class UnitTest extends \Bar\Foo,\Foo\Bar' . PHP_EOL .
+            'class UnitTest extends \Bar\Foo' . PHP_EOL .
             '{' . PHP_EOL .
             '}';
 
@@ -300,8 +299,7 @@ class ClassGeneratorTest extends GeneratorTestCase
         $generator->addConstant($constantFoo);
         $generator->addProperty($propertyBar);
         $generator->addProperty($propertyFoo);
-        $generator->addExtends('BarFoo');
-        $generator->addExtends('FooBar');
+        $generator->setExtends('BarFoo');
         $generator->addImplements('BarFooInterface');
         $generator->addImplements('FooBarInterface');
         $generator->addMethod($methodOne);
@@ -329,7 +327,7 @@ class ClassGeneratorTest extends GeneratorTestCase
             ' *' . PHP_EOL .
             ' * @package Baz' . PHP_EOL .
             ' */' . PHP_EOL .
-            'class UnitTest extends BarFoo,FooBar implements BarFooInterface, FooBarInterface' . PHP_EOL .
+            'class UnitTest extends BarFoo implements BarFooInterface, FooBarInterface' . PHP_EOL .
             '{' . PHP_EOL .
             $indention . "const BAR = 'foo';" . PHP_EOL .
             '' . PHP_EOL .

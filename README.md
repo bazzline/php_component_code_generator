@@ -47,6 +47,7 @@ Take a look on [ohloh.net](https://www.ohloh.net/p/php_component_code_generator)
 * [0.0.2](https://github.com/stevleibelt/php_component_code_generator/tree/0.0.2) - not yet released
     * fixed bug in BlockGenerator::startIndention() - now multiple calls are supported
     * added method Indention::isSetToInitialLevel();
+    * fixed logical bug by replacing "addExtends" to "setExtends" since it is not allowed to extend from more than one class
 * [0.0.1](https://github.com/stevleibelt/php_component_code_generator/tree/0.0.1) - released at 25.05.2014
     * covered main code with tests
     * created [examples](https://github.com/stevleibelt/php_component_code_generator/tree/0.0.1/example)

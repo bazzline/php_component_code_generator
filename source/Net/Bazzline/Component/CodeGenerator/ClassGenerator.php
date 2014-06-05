@@ -25,9 +25,9 @@ class ClassGenerator extends AbstractDocumentedGenerator
      * @param boolean $addToUse
      * @return $this
      */
-    public function addExtends($className, $addToUse = false)
+    public function setExtends($className, $addToUse = false)
     {
-        $this->addGeneratorProperty('extends', (string) $className);
+        $this->addGeneratorProperty('extends', (string) $className, false);
 
         if ($addToUse) {
             $this->addUse($className);
@@ -316,9 +316,9 @@ class ClassGenerator extends AbstractDocumentedGenerator
         }
 
         $line->add('class ' . $name);
-        if (is_array($extends)) {
+        if (is_string($extends)) {
             $line->add('extends');
-            $line->add(implode(',', $extends));
+            $line->add($extends);
         }
         if (is_array($implements)) {
             $line->add('implements');
