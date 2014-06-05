@@ -66,7 +66,7 @@ class ClassExample extends AbstractExample
         $myClass->setNamespace('My\Namespace');
         $myClass->setName('MyClass');
         $myClass->markAsFinal();
-        $myClass->addExtends('Foo\Bar', true);
+        $myClass->setExtends('Foo\Bar', true);
         $myClass->addImplements('Bar\FooInterface', true);
         $myClass->addConstant($myConstant);
         $myClass->addMethod($myMethod);
