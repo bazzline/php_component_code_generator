@@ -7,6 +7,10 @@ This component comes with a lot of [examples](https://github.com/stevleibelt/php
 
 Take a look on [ohloh.net](https://www.ohloh.net/p/php_component_code_generator).
 
+The build status of the current master branch is tracked by Travis CI: 
+
+[![Build Status](https://travis-ci.org/stevleibelt/php_component_code_generator.png?branch=master)](http://travis-ci.org/stevleibelt/php_component_code_generator)
+
 # Install
 
 ## Manuel
