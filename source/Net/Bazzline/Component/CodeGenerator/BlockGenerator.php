@@ -117,7 +117,8 @@ class BlockGenerator extends AbstractContentGenerator implements LineGeneratorDe
     public function generate()
     {
         $string = '';
-        $lastKey = array_pop(array_keys($this->content));
+        $arrayKeys = array_keys($this->content);
+        $lastKey = array_pop($arrayKeys);
 
         foreach ($this->content as $key => $content) {
             if ($content->hasContent()) {

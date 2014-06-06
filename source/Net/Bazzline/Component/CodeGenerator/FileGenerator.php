@@ -221,7 +221,8 @@ class FileGenerator extends AbstractDocumentedGenerator
             if ($this->addEmptyLine) {
                 $this->addContent('');
             }
-            $lastArrayKey = array_pop(array_keys($classes));
+            $arrayKeys = array_keys($classes);
+            $lastArrayKey = array_pop($arrayKeys);
             foreach($classes as $key => $class) {
                 $this->addGeneratorAsContent($class);
                 if ($key !== $lastArrayKey) {
