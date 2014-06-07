@@ -315,15 +315,20 @@ class ClassGenerator extends AbstractDocumentedGenerator
             $line->add('final');
         }
 
-        $line->add('class ' . $name);
-        if (is_string($extends)) {
-            $line->add('extends');
-            $line->add($extends);
+        if (!$isInterface) {
+            $line->add('class ' . $name);
+
+            if (is_string($extends)) {
+                $line->add('extends');
+                $line->add($extends);
+            }
         }
+
         if (is_array($implements)) {
             $line->add('implements');
             $line->add(implode(', ', $implements));
         }
+
         $this->addContent($line);
         $this->addEmptyLine = true;
     }
