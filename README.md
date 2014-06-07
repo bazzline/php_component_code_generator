@@ -26,6 +26,7 @@ The build status of the current master branch is tracked by Travis CI:
 # Future Improvements
 
 * create file example
+* create interface example
 * remove @tods in source code
 * add methods by visibility and final|!final status in ClassGenerator to get some automatic ordering of public|protected|private methods for generation
 * implement [automatically documentation](https://github.com/wells5609/CodeGenerator)
