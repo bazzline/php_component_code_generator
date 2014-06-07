@@ -39,7 +39,7 @@ class ClassGeneratorTest extends GeneratorTestCase
         $generator->setName('UnitTest');
 
         $expectedString =
-            'interface class UnitTest' . PHP_EOL .
+            'interface UnitTest' . PHP_EOL .
             '{' . PHP_EOL .
             '}';
 

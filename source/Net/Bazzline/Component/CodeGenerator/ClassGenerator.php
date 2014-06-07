@@ -315,7 +315,9 @@ class ClassGenerator extends AbstractDocumentedGenerator
             $line->add('final');
         }
 
-        if (!$isInterface) {
+        if ($isInterface) {
+            $line->add($name);
+        } else {
             $line->add('class ' . $name);
 
             if (is_string($extends)) {
