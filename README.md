@@ -51,7 +51,8 @@ The build status of the current master branch is tracked by Travis CI:
 
 # History
 
-* [0.0.3](https://github.com/stevleibelt/php_component_code_generator/tree/0.0.3) - not yet released
+* [0.0.4](https://github.com/stevleibelt/php_component_code_generator/tree/0.0.4) - not yet released
+* [0.0.3](https://github.com/stevleibelt/php_component_code_generator/tree/0.0.3) - released at 10.06.2014
     * fixed broken strict tests
     * fixed invalid generation of interfaces
 * [0.0.2](https://github.com/stevleibelt/php_component_code_generator/tree/0.0.2) - released at 05.06.2014
