@@ -27,9 +27,9 @@ The build status of the current master branch is tracked by Travis CI:
 
 * create file example
 * create interface example
+* implement posibility to use some ["pre defined" methods](https://github.com/wells5609/CodeGenerator/tree/master/src/CodeGenerator/Method) for generation
 * remove @tods in source code
-* add methods by visibility and final|!final status in ClassGenerator to get some automatic ordering of public|protected|private methods for generation
-* implement [automatically documentation](https://github.com/wells5609/CodeGenerator)
+* implement method ordering by visibility and final|!final status in ClassGenerator to get some automatic ordering of public|protected|private methods for generation
 * [flavour api](https://github.com/propelorm/Propel/blob/master/generator/lib/builder/om/OMBuilder.php)
 * [extend trait](https://github.com/Speicher210/CodeGenerator/blob/master/docs/php/oop/generate-trait.md)
 * [extend indention](https://github.com/Speicher210/CodeGenerator/blob/master/src/Wingu/OctopusCore/CodeGenerator/GeneratorInterface.php)
@@ -38,6 +38,7 @@ The build status of the current master branch is tracked by Travis CI:
 * use symfony console and commands
     * add user interaction (ask if file should be overwritten/saved
 * what about something like [that](https://github.com/zetacomponents/PhpGenerator/blob/master/docs/example_general.php)
+* implement [automatically documentation](https://github.com/wells5609/CodeGenerator) (validate if this is still better than current approach)
 
 # Inspired By
 
