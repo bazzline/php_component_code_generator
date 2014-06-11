@@ -23,6 +23,23 @@ The build status of the current master branch is tracked by Travis CI:
 
     composer require net_bazzline/php_component_code_generator:dev-master
 
+# Benefits
+
+* no "new" inside classes ...
+* independent and configurable indention
+* no static calls
+* shipped with examples and factories
+* covered with unittests
+* open source
+* automatic phpdoc generation
+
+# Optimization Potential 
+
+* ... but "clone"
+* currently not widely used 
+* no code review by other developers so far
+* still open todo's
+
 # Future Improvements
 
 * create file example
