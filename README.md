@@ -67,7 +67,10 @@ The build status of the current master branch is tracked by Travis CI:
 
 # History
 
-* [0.0.4](https://github.com/stevleibelt/php_component_code_generator/tree/0.0.4) - not yet released
+* [1.0.1](https://github.com/stevleibelt/php_component_code_generator/tree/1.0.1) - not yet released
+* [1.0.0](https://github.com/stevleibelt/php_component_code_generator/tree/1.0.0) - released at 27.07.2014
+    * added example for [interface generator](https://github.com/stevleibelt/php_component_code_generator/tree/1.0.0/example/InterfaceExample.php)
+    * added example for [file generator](https://github.com/stevleibelt/php_component_code_generator/tree/1.0.0/example/FileExample.php)
 * [0.0.3](https://github.com/stevleibelt/php_component_code_generator/tree/0.0.3) - released at 10.06.2014
     * fixed broken strict tests
     * fixed invalid generation of interfaces
