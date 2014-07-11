@@ -42,7 +42,6 @@ The build status of the current master branch is tracked by Travis CI:
 
 # Future Improvements
 
-* create file example
 * create interface example
 * implement posibility to use some ["pre defined" methods](https://github.com/wells5609/CodeGenerator/tree/master/src/CodeGenerator/Method) for generation
 * remove @tods in source code

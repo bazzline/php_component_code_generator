@@ -24,6 +24,7 @@ class DTOGeneratorExample extends AbstractExample
         $documentationFactory = $this->getDocumentationGeneratorFactory();
         $methodFactory = $this->getMethodGeneratorFactory();
         $propertyFactory = $this->getPropertyGeneratorFactory();
+        //---- end of factories
 
         $class = $classFactory->create();
         $class->setDocumentation($documentationFactory->create());
