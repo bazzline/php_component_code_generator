@@ -3,13 +3,18 @@
 This project aims to deliver a easy to use php code generator.
 PHPDOC-Generation is also implemented as general generation tasks like "class", "function" or "property" generation.
 
+The build status of the current master branch is tracked by Travis CI: 
+[![Build Status](https://travis-ci.org/bazzline/php_component_code_generator.png?branch=master)](http://travis-ci.org/bazzline/php_component_code_generator)
+
+The scrutinizer status are:
+[![code quality](https://scrutinizer-ci.com/g/bazzline/php_component_code_generator/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bazzline/php_component_code_generator/) | [![code coverage](https://scrutinizer-ci.com/g/bazzline/php_component_code_generator/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/bazzline/php_component_code_generator/) | [![build status](https://scrutinizer-ci.com/g/bazzline/php_component_locator_generator/badges/build.png?b=master)](https://scrutinizer-ci.com/g/bazzline/php_component_code_generator/)
+
+The versioneye status is:
+[![Dependency Status](https://www.versioneye.com/user/projects/54036dbbeab62ac615000143/badge.svg?style=flat)](https://www.versioneye.com/user/projects/54036dbbeab62ac615000143)
+
 This component comes with a lot of [examples](https://github.com/bazzline/php_component_code_generator/tree/master/example) as well as default [factories](https://github.com/bazzline/php_component_code_generator/tree/master/source/Net/Bazzline/Component/CodeGenerator/Factory).
 
 Take a look on [ohloh.net](https://www.ohloh.net/p/php_component_code_generator).
-
-The build status of the current master branch is tracked by Travis CI: 
-
-[![Build Status](https://travis-ci.org/bazzline/php_component_code_generator.png?branch=master)](http://travis-ci.org/bazzline/php_component_code_generator)
 
 # Install
 
