@@ -45,6 +45,10 @@ Take a look on [ohloh.net](https://www.ohloh.net/p/php_component_code_generator)
 * no code review by other developers so far
 * still open todo's
 
+# API
+
+Thanks to [apigen](https://github.com/apigen/apigen), the api is available in the [document](https://github.com/bazzline/php_component_code_generator/blob/master/document/index.html) section.
+
 # Future Improvements
 
 * implement possibility to use some ["pre defined" methods](https://github.com/wells5609/CodeGenerator/tree/master/src/CodeGenerator/Method) for generation
@@ -73,6 +77,7 @@ Take a look on [ohloh.net](https://www.ohloh.net/p/php_component_code_generator)
 # History
 
 * [1.0.2](https://github.com/bazzline/php_component_code_generator/tree/1.0.1) - not yet released
+    * added api
 * [1.0.1](https://github.com/bazzline/php_component_code_generator/tree/1.0.1) - released at 31.08.2014
     * transfered project to bazzline
     * updated dependencies
