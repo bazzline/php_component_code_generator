@@ -3,13 +3,13 @@
 This project aims to deliver a easy to use php code generator.
 PHPDOC-Generation is also implemented as general generation tasks like "class", "function" or "property" generation.
 
-This component comes with a lot of [examples](https://github.com/stevleibelt/php_component_code_generator/tree/master/example) as well as default [factories](https://github.com/stevleibelt/php_component_code_generator/tree/master/source/Net/Bazzline/Component/CodeGenerator/Factory).
+This component comes with a lot of [examples](https://github.com/bazzline/php_component_code_generator/tree/master/example) as well as default [factories](https://github.com/bazzline/php_component_code_generator/tree/master/source/Net/Bazzline/Component/CodeGenerator/Factory).
 
 Take a look on [ohloh.net](https://www.ohloh.net/p/php_component_code_generator).
 
 The build status of the current master branch is tracked by Travis CI: 
 
-[![Build Status](https://travis-ci.org/stevleibelt/php_component_code_generator.png?branch=master)](http://travis-ci.org/stevleibelt/php_component_code_generator)
+[![Build Status](https://travis-ci.org/bazzline/php_component_code_generator.png?branch=master)](http://travis-ci.org/bazzline/php_component_code_generator)
 
 # Install
 
@@ -17,7 +17,7 @@ The build status of the current master branch is tracked by Travis CI:
 
     mkdir -p vendor/net_bazzline/php_component_code_generator
     cd vendor/net_bazzline/php_component_code_generator
-    git clone https://github.com/stevleibelt/php_component_code_generator .
+    git clone https://github.com/bazzline/php_component_code_generator .
 
 ## With [Packagist](https://packagist.org/packages/net_bazzline/php_component_code_generator)
 
@@ -67,18 +67,18 @@ The build status of the current master branch is tracked by Travis CI:
 
 # History
 
-* [1.0.1](https://github.com/stevleibelt/php_component_code_generator/tree/1.0.1) - not yet released
-* [1.0.0](https://github.com/stevleibelt/php_component_code_generator/tree/1.0.0) - released at 27.07.2014
-    * added example for [interface generator](https://github.com/stevleibelt/php_component_code_generator/tree/1.0.0/example/InterfaceExample.php)
-    * added example for [file generator](https://github.com/stevleibelt/php_component_code_generator/tree/1.0.0/example/FileExample.php)
-* [0.0.3](https://github.com/stevleibelt/php_component_code_generator/tree/0.0.3) - released at 10.06.2014
+* [1.0.1](https://github.com/bazzline/php_component_code_generator/tree/1.0.1) - not yet released
+* [1.0.0](https://github.com/bazzline/php_component_code_generator/tree/1.0.0) - released at 27.07.2014
+    * added example for [interface generator](https://github.com/bazzline/php_component_code_generator/tree/1.0.0/example/InterfaceExample.php)
+    * added example for [file generator](https://github.com/bazzline/php_component_code_generator/tree/1.0.0/example/FileExample.php)
+* [0.0.3](https://github.com/bazzline/php_component_code_generator/tree/0.0.3) - released at 10.06.2014
     * fixed broken strict tests
     * fixed invalid generation of interfaces
-* [0.0.2](https://github.com/stevleibelt/php_component_code_generator/tree/0.0.2) - released at 05.06.2014
+* [0.0.2](https://github.com/bazzline/php_component_code_generator/tree/0.0.2) - released at 05.06.2014
     * fixed bug in BlockGenerator::startIndention() - now multiple calls are supported
     * added method Indention::isSetToInitialLevel();
     * fixed logical bug by replacing "addExtends" to "setExtends" since it is not allowed to extend from more than one class
-* [0.0.1](https://github.com/stevleibelt/php_component_code_generator/tree/0.0.1) - released at 25.05.2014
+* [0.0.1](https://github.com/bazzline/php_component_code_generator/tree/0.0.1) - released at 25.05.2014
     * covered main code with tests
-    * created [examples](https://github.com/stevleibelt/php_component_code_generator/tree/0.0.1/example)
-    * created [factories](https://github.com/stevleibelt/php_component_code_generator/tree/0.0.1/source/Net/Bazzline/Component/CodeGenerator/Factory)
+    * created [examples](https://github.com/bazzline/php_component_code_generator/tree/0.0.1/example)
+    * created [factories](https://github.com/bazzline/php_component_code_generator/tree/0.0.1/source/Net/Bazzline/Component/CodeGenerator/Factory)
