@@ -72,7 +72,10 @@ Take a look on [ohloh.net](https://www.ohloh.net/p/php_component_code_generator)
 
 # History
 
-* [1.0.1](https://github.com/bazzline/php_component_code_generator/tree/1.0.1) - not yet released
+* [1.0.2](https://github.com/bazzline/php_component_code_generator/tree/1.0.1) - not yet released
+* [1.0.1](https://github.com/bazzline/php_component_code_generator/tree/1.0.1) - released at 31.08.2014
+    * transfered project to bazzline
+    * updated dependencies
 * [1.0.0](https://github.com/bazzline/php_component_code_generator/tree/1.0.0) - released at 27.07.2014
     * added example for [interface generator](https://github.com/bazzline/php_component_code_generator/tree/1.0.0/example/InterfaceExample.php)
     * added example for [file generator](https://github.com/bazzline/php_component_code_generator/tree/1.0.0/example/FileExample.php)
