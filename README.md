@@ -78,6 +78,7 @@ Thanks to [apigen](https://github.com/apigen/apigen), the api is available in th
 
 * [1.0.2](https://github.com/bazzline/php_component_code_generator/tree/1.0.2) - not yet released
     * added api
+    * updated dependencies
 * [1.0.1](https://github.com/bazzline/php_component_code_generator/tree/1.0.1) - released at 31.08.2014
     * transfered project to bazzline
     * updated dependencies
