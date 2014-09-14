@@ -5,7 +5,7 @@ PHPDOC-Generation is also implemented as general generation tasks like "class", 
 
 The build status of the current master branch is tracked by Travis CI: 
 [![Build Status](https://travis-ci.org/bazzline/php_component_code_generator.png?branch=master)](http://travis-ci.org/bazzline/php_component_code_generator)
-[![Latest stable](https://img.shields.io/packagist/v/apigen/apigen.svg)](https://packagist.org/packages/net_bazzline/php_component_code_generator)
+[![Latest stable](https://img.shields.io/packagist/v/net_bazzline/php_component_code_generator.svg)](https://packagist.org/packages/net_bazzline/php_component_code_generator)
 
 The scrutinizer status are:
 [![code quality](https://scrutinizer-ci.com/g/bazzline/php_component_code_generator/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bazzline/php_component_code_generator/) | [![code coverage](https://scrutinizer-ci.com/g/bazzline/php_component_code_generator/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/bazzline/php_component_code_generator/) | [![build status](https://scrutinizer-ci.com/g/bazzline/php_component_locator_generator/badges/build.png?b=master)](https://scrutinizer-ci.com/g/bazzline/php_component_code_generator/)
