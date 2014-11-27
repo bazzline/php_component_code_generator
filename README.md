@@ -19,7 +19,7 @@ Take a look on [ohloh.net](https://www.ohloh.net/p/php_component_code_generator)
 
 # Install
 
-## Manuel
+## By Hand
 
     mkdir -p vendor/net_bazzline/php_component_code_generator
     cd vendor/net_bazzline/php_component_code_generator
