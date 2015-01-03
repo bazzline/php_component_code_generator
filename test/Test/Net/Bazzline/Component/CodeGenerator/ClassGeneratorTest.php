@@ -32,20 +32,6 @@ class ClassGeneratorTest extends GeneratorTestCase
         $this->assertEquals($expectedString, $generator->generate());
     }
 
-    public function testAsInterface()
-    {
-        $generator = $this->getClassGenerator();
-        $generator->markAsInterface();
-        $generator->setName('UnitTest');
-
-        $expectedString =
-            'interface UnitTest' . PHP_EOL .
-            '{' . PHP_EOL .
-            '}';
-
-        $this->assertEquals($expectedString, $generator->generate());
-    }
-
     public function testAsFinal()
     {
         $generator = $this->getClassGenerator();

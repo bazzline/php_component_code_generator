@@ -11,6 +11,7 @@ use Net\Bazzline\Component\CodeGenerator\ClassGenerator;
 use Net\Bazzline\Component\CodeGenerator\ConstantGenerator;
 use Net\Bazzline\Component\CodeGenerator\DocumentationGenerator;
 use Net\Bazzline\Component\CodeGenerator\FileGenerator;
+use Net\Bazzline\Component\CodeGenerator\InterfaceGenerator;
 use Net\Bazzline\Component\CodeGenerator\GeneratorInterface;
 use Net\Bazzline\Component\CodeGenerator\Indention;
 use Net\Bazzline\Component\CodeGenerator\LineGenerator;
@@ -81,13 +82,11 @@ class GeneratorTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
-     * @param Indention $indention
      * @return ClassGenerator
      */
-    protected function getClassGenerator(Indention $indention = null)
+    protected function getClassGenerator()
     {
         $generator = $this->getClassGeneratorFactory()->create();
-
 
         return $generator;
     }
@@ -120,6 +119,16 @@ class GeneratorTestCase extends PHPUnit_Framework_TestCase
             $indention = $this->getIndention();
         }
         $generator->setIndention($indention);
+
+        return $generator;
+    }
+
+    /**
+     * @return InterfaceGenerator
+     */
+    protected function getInterfaceGenerator()
+    {
+        $generator = $this->getInterfaceGeneratorFactory()->create();
 
         return $generator;
     }
@@ -258,6 +267,14 @@ class GeneratorTestCase extends PHPUnit_Framework_TestCase
     private function getFileGeneratorFactory()
     {
         return $this->getFactoryFromInstancePool('FileGeneratorFactory');
+    }
+
+    /**
+     * @return \Net\Bazzline\Component\CodeGenerator\Factory\InterfaceGeneratorFactory
+     */
+    private function getInterfaceGeneratorFactory()
+    {
+        return $this->getFactoryFromInstancePool('InterfaceGeneratorFactory');
     }
 
     /**

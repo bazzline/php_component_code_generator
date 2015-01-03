@@ -115,6 +115,7 @@ abstract class AbstractGenerator extends AbstractBasicGenerator implements Block
     final protected function addGeneratorProperty($name, $value, $isStackable = true)
     {
         $name = (string) $name;
+
         if ($isStackable) {
             if ((!isset($this->properties[$name]))
                 || (!is_array($this->properties[$name]))) {
@@ -127,6 +128,7 @@ abstract class AbstractGenerator extends AbstractBasicGenerator implements Block
             }
             $this->properties[$name] = $value;
         }
+
         $this->markAsCanBeGenerated();
     }
 
