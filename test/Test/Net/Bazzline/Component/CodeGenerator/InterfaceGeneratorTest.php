@@ -31,15 +31,30 @@ class InterfaceGeneratorTest extends GeneratorTestCase
         $this->assertEquals($expectedString, $generator->generate());
     }
 
-    public function testWithExtends()
+    public function testWithSingleExtends()
+    {
+        $generator = $this->getInterfaceGenerator();
+        $generator->addExtends('\BarInterface');
+        $generator->setName('UnitTest');
+
+        $expectedString =
+            'interface UnitTest extends \BarInterface' . PHP_EOL .
+            '{' . PHP_EOL .
+            '}';
+
+        $this->assertEquals($expectedString, $generator->generate());
+    }
+
+    public function testWithMultipleExtends()
     {
         $generator = $this->getInterfaceGenerator();
         $generator->addExtends('\BarInterface');
         $generator->addExtends('\FooInterface');
+        $generator->addExtends('\FooBarInterface');
         $generator->setName('UnitTest');
 
         $expectedString =
-            'interface UnitTest extends \BarInterface, \FooInterface' . PHP_EOL .
+            'interface UnitTest extends \BarInterface, \FooInterface, \FooBarInterface' . PHP_EOL .
             '{' . PHP_EOL .
             '}';
 
