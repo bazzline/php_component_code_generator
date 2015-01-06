@@ -77,7 +77,8 @@ Thanks to [apigen](https://github.com/apigen/apigen), the api is available in th
 
 # History
 
-* [1.1.0](https://github.com/bazzline/php_component_code_generator/tree/1.1.0) - not yet released
+* [1.1.1](https://github.com/bazzline/php_component_code_generator/tree/1.1.1) - not yet released
+* [1.1.0](https://github.com/bazzline/php_component_code_generator/tree/1.1.0) - released at 06.01.2014
     * added api
     * fixed a bug in class generator by creating a interface generator
         * by using a interface generator, it is now possible to create an interface that extends more than one interface
