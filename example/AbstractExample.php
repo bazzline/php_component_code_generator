@@ -9,6 +9,7 @@ use Net\Bazzline\Component\CodeGenerator\Factory\ClassGeneratorFactory;
 use Net\Bazzline\Component\CodeGenerator\Factory\ConstantGeneratorFactory;
 use Net\Bazzline\Component\CodeGenerator\Factory\DocumentationGeneratorFactory;
 use Net\Bazzline\Component\CodeGenerator\Factory\FileGeneratorFactory;
+use Net\Bazzline\Component\CodeGenerator\Factory\InterfaceGeneratorFactory;
 use Net\Bazzline\Component\CodeGenerator\Factory\LineGeneratorFactory;
 use Net\Bazzline\Component\CodeGenerator\Factory\MethodGeneratorFactory;
 use Net\Bazzline\Component\CodeGenerator\Factory\PropertyGeneratorFactory;
@@ -96,6 +97,14 @@ abstract class AbstractExample
     final protected function getPropertyGeneratorFactory()
     {
         return new PropertyGeneratorFactory();
+    }
+
+    /**
+     * @return InterfaceGeneratorFactory
+     */
+    final protected function getInterfaceGeneratorFactory()
+    {
+        return new InterfaceGeneratorFactory();
     }
 
     /**

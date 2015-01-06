@@ -78,12 +78,12 @@ Thanks to [apigen](https://github.com/apigen/apigen), the api is available in th
 # History
 
 * [1.1.0](https://github.com/bazzline/php_component_code_generator/tree/1.1.0) - not yet released
-    * fixed a bug in class generator (if acting as a interface, it must be possible to add more than one extends)
-    * @todo
-        * create SignatureGeneratorTest
-        * rearrange test cases to fitting test
-* [1.0.2](https://github.com/bazzline/php_component_code_generator/tree/1.0.2) - not yet released
     * added api
+    * fixed a bug in class generator by creating a interface generator
+        * by using a interface generator, it is now possible to create an interface that extends more than one interface
+        * created a general SignatureGenerator (extended by InterfaceGenerator and ClassGenerator)
+        * covered new code with unit tests
+        * updated InterfaceExample
     * updated dependencies
 * [1.0.1](https://github.com/bazzline/php_component_code_generator/tree/1.0.1) - released at 31.08.2014
     * transfered project to bazzline

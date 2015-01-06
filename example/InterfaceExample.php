@@ -19,13 +19,13 @@ class InterfaceExample extends AbstractExample
     function demonstrate()
     {
         //----begin of factories
-        $classFactory           = $this->getClassGeneratorFactory();
+        $interfaceFactory       = $this->getInterfaceGeneratorFactory();
         $documentationFactory   = $this->getDocumentationGeneratorFactory();
         $methodFactory          = $this->getMethodGeneratorFactory();
         //----end of factories
 
         //----begin of generators
-        $interface      = $classFactory->create();
+        $interface      = $interfaceFactory->create();
         $method         = $methodFactory->create();
         //----end of generators
 
@@ -33,8 +33,7 @@ class InterfaceExample extends AbstractExample
         $interface->setDocumentation($documentationFactory->create());
         $interface->setName('FooInterface');
         $interface->setNamespace('My\\Example');
-        $interface->markAsInterface();
-        $interface->addImplements('BarInterface', true);
+        $interface->addExtends('BarInterface', true);
 
         $method->setDocumentation($documentationFactory->create());
         $method->setName('foo');
