@@ -13,7 +13,7 @@ use Net\Bazzline\Component\CodeGenerator\RuntimeException;
  * Class ClassGenerator
  * @package Net\Bazzline\Component\Locator\LocatorGenerator\Generator
  */
-class ClassGenerator extends AbstractSignatureGenerator
+class ClassGenerator extends SignatureGenerator
 {
     /**
      * @param string $className

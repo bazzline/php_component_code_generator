@@ -5,7 +5,7 @@
 	<meta name="generator" content="ApiGen 2.8.0">
 	<meta name="robots" content="noindex">
 
-	<title>File Factory/PropertyGeneratorFactory.php | Code Generator by Bazzline</title>
+	<title>File Factory/InterfaceGeneratorFactory.php | Code Generator by Bazzline</title>
 
 	<link rel="stylesheet" href="resources/style.css?3901564645">
 
@@ -48,10 +48,10 @@
 				<li><a href="class-Net.Bazzline.Component.CodeGenerator.Factory.ConstantGeneratorFactory.html">ConstantGeneratorFactory</a></li>
 				<li><a href="class-Net.Bazzline.Component.CodeGenerator.Factory.DocumentationGeneratorFactory.html">DocumentationGeneratorFactory</a></li>
 				<li><a href="class-Net.Bazzline.Component.CodeGenerator.Factory.FileGeneratorFactory.html">FileGeneratorFactory</a></li>
-				<li><a href="class-Net.Bazzline.Component.CodeGenerator.Factory.InterfaceGeneratorFactory.html">InterfaceGeneratorFactory</a></li>
+				<li class="active"><a href="class-Net.Bazzline.Component.CodeGenerator.Factory.InterfaceGeneratorFactory.html">InterfaceGeneratorFactory</a></li>
 				<li><a href="class-Net.Bazzline.Component.CodeGenerator.Factory.LineGeneratorFactory.html">LineGeneratorFactory</a></li>
 				<li><a href="class-Net.Bazzline.Component.CodeGenerator.Factory.MethodGeneratorFactory.html">MethodGeneratorFactory</a></li>
-				<li class="active"><a href="class-Net.Bazzline.Component.CodeGenerator.Factory.PropertyGeneratorFactory.html">PropertyGeneratorFactory</a></li>
+				<li><a href="class-Net.Bazzline.Component.CodeGenerator.Factory.PropertyGeneratorFactory.html">PropertyGeneratorFactory</a></li>
 				<li><a href="class-Net.Bazzline.Component.CodeGenerator.Factory.SignatureGeneratorFactory.html">SignatureGeneratorFactory</a></li>
 				<li><a href="class-Net.Bazzline.Component.CodeGenerator.Factory.TraitGeneratorFactory.html">TraitGeneratorFactory</a></li>
 			</ul>
@@ -88,7 +88,7 @@
 				<a href="namespace-Net.Bazzline.Component.CodeGenerator.Factory.html" title="Summary of Net\Bazzline\Component\CodeGenerator\Factory"><span>Namespace</span></a>
 			</li>
 			<li>
-				<a href="class-Net.Bazzline.Component.CodeGenerator.Factory.PropertyGeneratorFactory.html" title="Summary of Net\Bazzline\Component\CodeGenerator\Factory\PropertyGeneratorFactory"><span>Class</span></a>
+				<a href="class-Net.Bazzline.Component.CodeGenerator.Factory.InterfaceGeneratorFactory.html" title="Summary of Net\Bazzline\Component\CodeGenerator\Factory\InterfaceGeneratorFactory"><span>Class</span></a>
 			</li>
 		</ul>
 		<ul>
@@ -103,22 +103,22 @@
 <pre><code><span id="1" class="l"><a class="l" href="#1"> 1: </a><span class="xlang">&lt;?php</span>
 </span><span id="2" class="l"><a class="l" href="#2"> 2: </a><span class="php-comment">/**
 </span></span><span id="3" class="l"><a class="l" href="#3"> 3: </a><span class="php-comment"> * @author stev leibelt &lt;artodeto@bazzline.net&gt;
-</span></span><span id="4" class="l"><a class="l" href="#4"> 4: </a><span class="php-comment"> * @since 2014-05-20 
+</span></span><span id="4" class="l"><a class="l" href="#4"> 4: </a><span class="php-comment"> * @since 2015-01-04 
 </span></span><span id="5" class="l"><a class="l" href="#5"> 5: </a><span class="php-comment"> */</span>
 </span><span id="6" class="l"><a class="l" href="#6"> 6: </a>
 </span><span id="7" class="l"><a class="l" href="#7"> 7: </a><span class="php-keyword1">namespace</span> Net\Bazzline\Component\CodeGenerator\Factory;
 </span><span id="8" class="l"><a class="l" href="#8"> 8: </a>
-</span><span id="9" class="l"><a class="l" href="#9"> 9: </a><span class="php-keyword1">use</span> Net\Bazzline\Component\CodeGenerator\PropertyGenerator;
+</span><span id="9" class="l"><a class="l" href="#9"> 9: </a><span class="php-keyword1">use</span> Net\Bazzline\Component\CodeGenerator\InterfaceGenerator;
 </span><span id="10" class="l"><a class="l" href="#10">10: </a>
 </span><span id="11" class="l"><a class="l" href="#11">11: </a><span class="php-comment">/**
-</span></span><span id="12" class="l"><a class="l" href="#12">12: </a><span class="php-comment"> * Class PropertyGeneratorFactory
+</span></span><span id="12" class="l"><a class="l" href="#12">12: </a><span class="php-comment"> * Class InterfaceGeneratorFactory
 </span></span><span id="13" class="l"><a class="l" href="#13">13: </a><span class="php-comment"> * @package Net\Bazzline\Component\CodeGenerator\Factory
 </span></span><span id="14" class="l"><a class="l" href="#14">14: </a><span class="php-comment"> */</span>
-</span><span id="15" class="l"><a class="l" href="#15">15: </a><span class="php-keyword1">class</span> <a id="PropertyGeneratorFactory" href="#PropertyGeneratorFactory">PropertyGeneratorFactory</a> <span class="php-keyword1">extends</span> AbstractGeneratorFactory
+</span><span id="15" class="l"><a class="l" href="#15">15: </a><span class="php-keyword1">class</span> <a id="InterfaceGeneratorFactory" href="#InterfaceGeneratorFactory">InterfaceGeneratorFactory</a> <span class="php-keyword1">extends</span> AbstractGeneratorFactory
 </span><span id="16" class="l"><a class="l" href="#16">16: </a>{
 </span><span id="17" class="l"><a class="l" href="#17">17: </a>    <span class="php-comment">/**
 </span></span><span id="18" class="l"><a class="l" href="#18">18: </a><span class="php-comment">     * This method is just there for type hinting
-</span></span><span id="19" class="l"><a class="l" href="#19">19: </a><span class="php-comment">     * @return \Net\Bazzline\Component\CodeGenerator\PropertyGenerator
+</span></span><span id="19" class="l"><a class="l" href="#19">19: </a><span class="php-comment">     * @return \Net\Bazzline\Component\CodeGenerator\InterfaceGenerator
 </span></span><span id="20" class="l"><a class="l" href="#20">20: </a><span class="php-comment">     */</span>
 </span><span id="21" class="l"><a class="l" href="#21">21: </a>    <span class="php-keyword1">public</span> <span class="php-keyword1">function</span> <a id="_create" href="#_create">create</a>()
 </span><span id="22" class="l"><a class="l" href="#22">22: </a>    {
@@ -130,7 +130,7 @@
 </span></span><span id="28" class="l"><a class="l" href="#28">28: </a><span class="php-comment">     */</span>
 </span><span id="29" class="l"><a class="l" href="#29">29: </a>    <span class="php-keyword1">protected</span> <span class="php-keyword1">function</span> <a id="_getGenerator" href="#_getGenerator">getGenerator</a>()
 </span><span id="30" class="l"><a class="l" href="#30">30: </a>    {
-</span><span id="31" class="l"><a class="l" href="#31">31: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">new</span> PropertyGenerator();
+</span><span id="31" class="l"><a class="l" href="#31">31: </a>        <span class="php-keyword1">return</span> <span class="php-keyword1">new</span> InterfaceGenerator();
 </span><span id="32" class="l"><a class="l" href="#32">32: </a>    }
 </span><span id="33" class="l"><a class="l" href="#33">33: </a>}</span></code></pre>
 

@@ -7,10 +7,10 @@
 namespace Net\Bazzline\Component\CodeGenerator;
 
 /**
- * Class AbstractSignatureGenerator
+ * Class SignatureGenerator
  * @package Net\Bazzline\Component\CodeGenerator
  */
-abstract class AbstractSignatureGenerator extends AbstractDocumentedGenerator
+class SignatureGenerator extends AbstractDocumentedGenerator
 {
     /**
      * @var boolean

@@ -17,6 +17,7 @@ use Net\Bazzline\Component\CodeGenerator\Indention;
 use Net\Bazzline\Component\CodeGenerator\LineGenerator;
 use Net\Bazzline\Component\CodeGenerator\MethodGenerator;
 use Net\Bazzline\Component\CodeGenerator\PropertyGenerator;
+use Net\Bazzline\Component\CodeGenerator\SignatureGenerator;
 use Net\Bazzline\Component\CodeGenerator\TraitGenerator;
 use PHPUnit_Framework_TestCase;
 use Mockery;
@@ -82,11 +83,17 @@ class GeneratorTestCase extends PHPUnit_Framework_TestCase
     }
 
     /**
+     * @param Indention $indention
      * @return ClassGenerator
      */
-    protected function getClassGenerator()
+    protected function getClassGenerator(Indention $indention = null)
     {
         $generator = $this->getClassGeneratorFactory()->create();
+
+        if (is_null($indention)) {
+            $indention = $this->getIndention();
+        }
+        $generator->setIndention($indention);
 
         return $generator;
     }
@@ -199,6 +206,22 @@ class GeneratorTestCase extends PHPUnit_Framework_TestCase
 
     /**
      * @param Indention $indention
+     * @return SignatureGenerator
+     */
+    protected function getSignatureGenerator(Indention $indention = null)
+    {
+        $generator = $this->getSignatureGeneratorFactory()->create();
+
+        if (is_null($indention)) {
+            $indention = $this->getIndention();
+        }
+        $generator->setIndention($indention);
+
+        return $generator;
+    }
+
+    /**
+     * @param Indention $indention
      * @return TraitGenerator
      */
     protected function getTraitGenerator(Indention $indention = null)
@@ -299,6 +322,14 @@ class GeneratorTestCase extends PHPUnit_Framework_TestCase
     private function getDocumentationGeneratorFactory()
     {
         return $this->getFactoryFromInstancePool('DocumentationGeneratorFactory');
+    }
+
+    /**
+     * @return \Net\Bazzline\Component\CodeGenerator\Factory\SignatureGeneratorFactory
+     */
+    private function getSignatureGeneratorFactory()
+    {
+        return $this->getFactoryFromInstancePool('SignatureGeneratorFactory');
     }
 
     /**

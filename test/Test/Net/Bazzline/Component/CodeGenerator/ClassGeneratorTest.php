@@ -75,52 +75,6 @@ class ClassGeneratorTest extends GeneratorTestCase
         $this->assertEquals($expectedString, $generator->generate());
     }
 
-    public function testWithUse()
-    {
-        $generator = $this->getClassGenerator();
-        $generator->addUse('Bar\Foo', 'BarFoo');
-        $generator->addUse('Foo\Bar', 'FooBar');
-        $generator->setName('UnitTest');
-
-        $expectedString =
-            'use Bar\Foo as BarFoo;' . PHP_EOL .
-            'use Foo\Bar as FooBar;' . PHP_EOL .
-            '' . PHP_EOL .
-            'class UnitTest' . PHP_EOL .
-            '{' . PHP_EOL .
-            '}';
-
-        $this->assertEquals($expectedString, $generator->generate());
-    }
-
-    public function testWithConstants()
-    {
-        $generator      = $this->getClassGenerator();
-        $constantBar    = $this->getConstantGenerator();
-        $constantFoo    = $this->getConstantGenerator();
-
-        $constantBar->setName('BAR');
-        $constantBar->setValue('foo');
-        $constantFoo->setName('FOO');
-        $constantFoo->setValue(42);
-
-        $generator->addConstant($constantBar);
-        $generator->addConstant($constantFoo);
-        $generator->setName('UnitTest');
-
-        $indention = $this->getIndention();
-        $indention->increaseLevel();
-        $expectedString =
-            'class UnitTest' . PHP_EOL .
-            '{' . PHP_EOL .
-            $indention . "const BAR = 'foo';" . PHP_EOL .
-            '' . PHP_EOL .
-            $indention . "const FOO = 42;" . PHP_EOL .
-            '}';
-
-        $this->assertEquals($expectedString, $generator->generate());
-    }
-
     public function testWithProperties()
     {
         $generator      = $this->getClassGenerator();
@@ -146,40 +100,6 @@ class ClassGeneratorTest extends GeneratorTestCase
             $indention . 'private $bar = 23;' . PHP_EOL .
             '' . PHP_EOL .
             $indention . 'protected $foo = 42;' . PHP_EOL .
-            '}';
-
-        $this->assertEquals($expectedString, $generator->generate());
-    }
-
-    public function testWithMethods()
-    {
-        $generator  = $this->getClassGenerator();
-        $methodOne  = $this->getMethodGenerator($generator->getIndention());
-        $methodTwo  = $this->getMethodGenerator($generator->getIndention());
-
-        $methodOne->setName('methodOne');
-        $methodOne->markAsPrivate();
-        $methodTwo->setName('methodTwo');
-        $methodTwo->markAsProtected();
-
-        $generator->addMethod($methodOne);
-        $generator->addMethod($methodTwo);
-        $generator->setName('UnitTest');
-
-        $indention = $this->getIndention();
-        $indention->increaseLevel();
-        $expectedString =
-            'class UnitTest' . PHP_EOL .
-            '{' . PHP_EOL .
-            $indention . 'private function methodOne()' . PHP_EOL .
-            $indention . '{' . PHP_EOL .
-            $indention . $indention . '//@todo implement' . PHP_EOL .
-            $indention . '}' . PHP_EOL .
-            '' . PHP_EOL .
-            $indention . 'protected function methodTwo()' . PHP_EOL .
-            $indention . '{' . PHP_EOL .
-            $indention . $indention . '//@todo implement' . PHP_EOL .
-            $indention . '}' . PHP_EOL .
             '}';
 
         $this->assertEquals($expectedString, $generator->generate());

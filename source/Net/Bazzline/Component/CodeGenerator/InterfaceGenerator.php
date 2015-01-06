@@ -10,7 +10,7 @@ namespace Net\Bazzline\Component\CodeGenerator;
  * Class InterfaceGenerator
  * @package Net\Bazzline\Component\CodeGenerator
  */
-class InterfaceGenerator extends AbstractSignatureGenerator
+class InterfaceGenerator extends SignatureGenerator
 {
     /**
      * @param string $name

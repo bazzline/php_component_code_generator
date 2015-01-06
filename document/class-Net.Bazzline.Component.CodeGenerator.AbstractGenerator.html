@@ -6,7 +6,7 @@
 
 	<title>Class Net\Bazzline\Component\CodeGenerator\AbstractGenerator | Code Generator by Bazzline</title>
 
-	<link rel="stylesheet" href="resources/style.css?3927427450">
+	<link rel="stylesheet" href="resources/style.css?3901564645">
 
 </head>
 
@@ -51,9 +51,11 @@
 				<li><a href="class-Net.Bazzline.Component.CodeGenerator.DocumentationGenerator.html">DocumentationGenerator</a></li>
 				<li><a href="class-Net.Bazzline.Component.CodeGenerator.FileGenerator.html">FileGenerator</a></li>
 				<li><a href="class-Net.Bazzline.Component.CodeGenerator.Indention.html">Indention</a></li>
+				<li><a href="class-Net.Bazzline.Component.CodeGenerator.InterfaceGenerator.html">InterfaceGenerator</a></li>
 				<li><a href="class-Net.Bazzline.Component.CodeGenerator.LineGenerator.html">LineGenerator</a></li>
 				<li><a href="class-Net.Bazzline.Component.CodeGenerator.MethodGenerator.html">MethodGenerator</a></li>
 				<li><a href="class-Net.Bazzline.Component.CodeGenerator.PropertyGenerator.html">PropertyGenerator</a></li>
+				<li><a href="class-Net.Bazzline.Component.CodeGenerator.SignatureGenerator.html">SignatureGenerator</a></li>
 				<li><a href="class-Net.Bazzline.Component.CodeGenerator.TraitGenerator.html">TraitGenerator</a></li>
 			</ul>
 
@@ -84,7 +86,8 @@
 	<form id="search">
 		<input type="hidden" name="cx" value="">
 		<input type="hidden" name="ie" value="UTF-8">
-		<input type="text" name="q" class="text" placeholder="Search">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
 	</form>
 
 	<div id="navigation">
@@ -150,8 +153,10 @@
 		<h4>Indirect known subclasses</h4>
 			<a href="class-Net.Bazzline.Component.CodeGenerator.ClassGenerator.html">Net\Bazzline\Component\CodeGenerator\ClassGenerator</a>, 
 			<a href="class-Net.Bazzline.Component.CodeGenerator.FileGenerator.html">Net\Bazzline\Component\CodeGenerator\FileGenerator</a>, 
+			<a href="class-Net.Bazzline.Component.CodeGenerator.InterfaceGenerator.html">Net\Bazzline\Component\CodeGenerator\InterfaceGenerator</a>, 
 			<a href="class-Net.Bazzline.Component.CodeGenerator.MethodGenerator.html">Net\Bazzline\Component\CodeGenerator\MethodGenerator</a>, 
 			<a href="class-Net.Bazzline.Component.CodeGenerator.PropertyGenerator.html">Net\Bazzline\Component\CodeGenerator\PropertyGenerator</a>, 
+			<a href="class-Net.Bazzline.Component.CodeGenerator.SignatureGenerator.html">Net\Bazzline\Component\CodeGenerator\SignatureGenerator</a>, 
 			<a href="class-Net.Bazzline.Component.CodeGenerator.TraitGenerator.html">Net\Bazzline\Component\CodeGenerator\TraitGenerator</a>
 	</div>
 
@@ -165,7 +170,7 @@
 		<b>Namespace:</b> <a href="namespace-Net.html">Net</a>\<a href="namespace-Net.Bazzline.html">Bazzline</a>\<a href="namespace-Net.Bazzline.Component.html">Component</a>\<a href="namespace-Net.Bazzline.Component.CodeGenerator.html">CodeGenerator</a><br>
 		<b>Package:</b> Net\Bazzline\Component\Locator\LocatorGenerator\Generator<br>
 
-		<b>Located at</b> <a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#9-255" title="Go to source code">AbstractGenerator.php</a><br>
+		<b>Located at</b> <a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#9-257" title="Go to source code">AbstractGenerator.php</a><br>
 	</div>
 
 
@@ -499,7 +504,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addGeneratorProperty">#</a>
-		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#110-131" title="Go to source code">addGeneratorProperty</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span>, <span>boolean <var>$isStackable</var> = <span class="php-keyword1">true</span></span> )</code>
+		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#110-133" title="Go to source code">addGeneratorProperty</a>( <span>string <var>$name</var></span>, <span>mixed <var>$value</var></span>, <span>boolean <var>$isStackable</var> = <span class="php-keyword1">true</span></span> )</code>
 
 		<div class="description short">
 			
@@ -537,7 +542,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addContent">#</a>
-		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#133-157" title="Go to source code">addContent</a>( <span>string|<code><a href="class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html">Net\Bazzline\Component\CodeGenerator\AbstractGenerator</a>[]</code> <var>$content</var></span>, <span>boolean <var>$isIndented</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#135-159" title="Go to source code">addContent</a>( <span>string|<code><a href="class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html">Net\Bazzline\Component\CodeGenerator\AbstractGenerator</a>[]</code> <var>$content</var></span>, <span>boolean <var>$isIndented</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			
@@ -577,7 +582,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_addGeneratorAsContent">#</a>
-		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#159-173" title="Go to source code">addGeneratorAsContent</a>( <span><code><a href="class-Net.Bazzline.Component.CodeGenerator.GeneratorInterface.html">Net\Bazzline\Component\CodeGenerator\GeneratorInterface</a></code> <var>$generator</var></span>, <span>boolean <var>$isIndented</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#161-175" title="Go to source code">addGeneratorAsContent</a>( <span><code><a href="class-Net.Bazzline.Component.CodeGenerator.GeneratorInterface.html">Net\Bazzline\Component\CodeGenerator\GeneratorInterface</a></code> <var>$generator</var></span>, <span>boolean <var>$isIndented</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			
@@ -613,7 +618,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_generateStringFromContent">#</a>
-		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#175-181" title="Go to source code">generateStringFromContent</a>( )</code>
+		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#177-183" title="Go to source code">generateStringFromContent</a>( )</code>
 
 		<div class="description short">
 			
@@ -646,7 +651,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getGeneratorProperty">#</a>
-		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#183-191" title="Go to source code">getGeneratorProperty</a>( <span>string <var>$name</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#185-193" title="Go to source code">getGeneratorProperty</a>( <span>string <var>$name</var></span>, <span>mixed <var>$default</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -686,7 +691,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getBlockGenerator">#</a>
-		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#193-207" title="Go to source code">getBlockGenerator</a>( <span>null|string|<code><a href="class-Net.Bazzline.Component.CodeGenerator.LineGenerator.html">Net\Bazzline\Component\CodeGenerator\LineGenerator</a></code>|<code><a href="class-Net.Bazzline.Component.CodeGenerator.BlockGenerator.html">Net\Bazzline\Component\CodeGenerator\BlockGenerator</a></code> <var>$content</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#195-209" title="Go to source code">getBlockGenerator</a>( <span>null|string|<code><a href="class-Net.Bazzline.Component.CodeGenerator.LineGenerator.html">Net\Bazzline\Component\CodeGenerator\LineGenerator</a></code>|<code><a href="class-Net.Bazzline.Component.CodeGenerator.BlockGenerator.html">Net\Bazzline\Component\CodeGenerator\BlockGenerator</a></code> <var>$content</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -724,7 +729,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getLineGenerator">#</a>
-		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#209-223" title="Go to source code">getLineGenerator</a>( <span>null|string <var>$content</var> = <span class="php-keyword1">null</span></span> )</code>
+		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#211-225" title="Go to source code">getLineGenerator</a>( <span>null|string <var>$content</var> = <span class="php-keyword1">null</span></span> )</code>
 
 		<div class="description short">
 			
@@ -762,7 +767,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getNotPrintableTypeHints">#</a>
-		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#225-231" title="Go to source code">getNotPrintableTypeHints</a>( )</code>
+		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#227-233" title="Go to source code">getNotPrintableTypeHints</a>( )</code>
 
 		<div class="description short">
 			
@@ -795,7 +800,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getLastArrayKey">#</a>
-		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#233-244" title="Go to source code">getLastArrayKey</a>( <span>array <var>$array</var></span> )</code>
+		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#235-246" title="Go to source code">getLastArrayKey</a>( <span>array <var>$array</var></span> )</code>
 
 		<div class="description short">
 			
@@ -833,7 +838,7 @@
 
 		<td class="name"><div>
 		<a class="anchor" href="#_resetContent">#</a>
-		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#246-254" title="Go to source code">resetContent</a>( )</code>
+		<code><a href="source-class-Net.Bazzline.Component.CodeGenerator.AbstractGenerator.html#248-256" title="Go to source code">resetContent</a>( )</code>
 
 		<div class="description short">
 			
@@ -898,7 +903,7 @@
 	</div>
 </div>
 </div>
-<script src="resources/combined.js?125178768"></script>
-<script src="elementlist.js?2967862005"></script>
+<script src="resources/combined.js?1411999616"></script>
+<script src="elementlist.js?2126916970"></script>
 </body>
 </html>
