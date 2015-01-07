@@ -77,11 +77,13 @@ Thanks to [apigen](https://github.com/apigen/apigen), the api is available in th
 
 # History
 
-* [1.1.3](https://github.com/bazzline/php_component_code_generator/tree/1.1.3) - not yet released
+* [1.1.4](https://github.com/bazzline/php_component_code_generator/tree/1.1.4) - not yet released
+* [1.1.3](https://github.com/bazzline/php_component_code_generator/tree/1.1.3) - released at 07.01.2015
+    * fixed bug in SignatureGenerator when auto generating Documentation as Interface
 * [1.1.2](https://github.com/bazzline/php_component_code_generator/tree/1.1.2) - released at 07.01.2015
-    * added support for InterfaceGenertor to DocumentationGenerator
+    * added support for InterfaceGenerator to DocumentationGenerator
 * [1.1.1](https://github.com/bazzline/php_component_code_generator/tree/1.1.1) - released at 07.01.2015
-    * added support for InterfaceGenertor to FileGenerator
+    * added support for InterfaceGenerator to FileGenerator
 * [1.1.0](https://github.com/bazzline/php_component_code_generator/tree/1.1.0) - released at 06.01.2015
     * added api
     * fixed a bug in class generator by creating a interface generator

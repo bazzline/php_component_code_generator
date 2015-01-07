@@ -82,6 +82,7 @@ class SignatureGenerator extends AbstractDocumentedGenerator
      * @throws InvalidArgumentException|RuntimeException
      * @return string
      * @todo implement exception throwing if mandatory parameter is missing
+     * @todo decouple/move fitting areas to ClassGenerator and InterfaceGenerator
      */
     public function generate()
     {
@@ -181,11 +182,17 @@ class SignatureGenerator extends AbstractDocumentedGenerator
 
         if ($documentation instanceof DocumentationGenerator) {
             if ($this->completeDocumentationAutomatically) {
-                $name       = $this->getGeneratorProperty('name');
-                $namespace  = $this->getGeneratorProperty('namespace');
+                $isInterface    = $this->getGeneratorProperty('interface', false);
+                $name           = $this->getGeneratorProperty('name');
+                $namespace      = $this->getGeneratorProperty('namespace');
 
                 if (is_string($name)) {
-                    $documentation->setClass($name);
+                    //@todo decouple/move fitting areas to ClassGenerator and InterfaceGenerator
+                    if ($isInterface) {
+                        $documentation->setInterface($name);
+                    } else {
+                        $documentation->setClass($name);
+                    }
                 }
                 if (is_string($namespace)) {
                     $documentation->setPackage($namespace);
@@ -231,6 +238,7 @@ class SignatureGenerator extends AbstractDocumentedGenerator
             $line->add('final');
         }
 
+        //@todo decouple/move fitting areas to ClassGenerator and InterfaceGenerator
         if ($isInterface) {
             $line->add($name);
 
