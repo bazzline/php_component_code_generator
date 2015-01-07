@@ -44,10 +44,10 @@ class FileGeneratorTest extends GeneratorTestCase
 
     public function testWithProperties()
     {
-        $generator = $this->getFileGenerator();
-        $indention = $this->getIndention();
-        $propertyBar = $this->getPropertyGenerator();
-        $propertyFoo = $this->getPropertyGenerator();
+        $generator      = $this->getFileGenerator();
+        $indention      = $this->getIndention();
+        $propertyBar    = $this->getPropertyGenerator();
+        $propertyFoo    = $this->getPropertyGenerator();
 
         $propertyBar->setName('bar');
         $propertyBar->markAsPublic();
@@ -70,24 +70,50 @@ class FileGeneratorTest extends GeneratorTestCase
 
     public function testWithClasses()
     {
-        $classBar = $this->getClassGenerator();
-        $classFoo = $this->getClassGenerator();
-        $generator = $this->getFileGenerator();
-        $indention = $this->getIndention();
+        $classBar   = $this->getClassGenerator();
+        $classFoo   = $this->getClassGenerator();
+        $generator  = $this->getFileGenerator();
+        $indention  = $this->getIndention();
 
-        $classBar->setName('bar');
-        $classFoo->setName('foo');
+        $classBar->setName('Bar');
+        $classFoo->setName('Foo');
 
         $generator->addClass($classBar);
         $generator->addClass($classFoo);
 
         $expectedContent = '<?php' . PHP_EOL .
             $indention . PHP_EOL .
-            $indention . 'class bar' . PHP_EOL .
+            $indention . 'class Bar' . PHP_EOL .
             $indention . '{' . PHP_EOL .
             $indention . '}' . PHP_EOL .
             $indention . PHP_EOL .
-            $indention . 'class foo' . PHP_EOL .
+            $indention . 'class Foo' . PHP_EOL .
+            $indention . '{' . PHP_EOL .
+            $indention . '}';
+
+        $this->assertEquals($expectedContent, $generator->generate());
+    }
+
+    public function testWithInterfaces()
+    {
+        $interfaceBar   = $this->getInterfaceGenerator();
+        $interfaceFoo   = $this->getInterfaceGenerator();
+        $generator      = $this->getFileGenerator();
+        $indention      = $this->getIndention();
+
+        $interfaceBar->setName('Bar');
+        $interfaceFoo->setName('Foo');
+
+        $generator->addInterface($interfaceBar);
+        $generator->addInterface($interfaceFoo);
+
+        $expectedContent = '<?php' . PHP_EOL .
+            $indention . PHP_EOL .
+            $indention . 'interface Bar' . PHP_EOL .
+            $indention . '{' . PHP_EOL .
+            $indention . '}' . PHP_EOL .
+            $indention . PHP_EOL .
+            $indention . 'interface Foo' . PHP_EOL .
             $indention . '{' . PHP_EOL .
             $indention . '}';
 
@@ -146,19 +172,21 @@ class FileGeneratorTest extends GeneratorTestCase
 
     public function testWithAll()
     {
-        $classBar = $this->getClassGenerator();
-        $classFoo = $this->getClassGenerator();
-        $constantBar = $this->getConstantGenerator();
-        $constantFoo = $this->getConstantGenerator();
-        $content = array(
+        $classBar       = $this->getClassGenerator();
+        $classFoo       = $this->getClassGenerator();
+        $constantBar    = $this->getConstantGenerator();
+        $constantFoo    = $this->getConstantGenerator();
+        $content        = array(
             '//@todo implement',
         );
-        $generator = $this->getFileGenerator();
-        $indention = $this->getIndention();
-        $methodBar = $this->getMethodGenerator($generator->getIndention());
-        $methodFoo = $this->getMethodGenerator($generator->getIndention());
-        $propertyBar = $this->getPropertyGenerator();
-        $propertyFoo = $this->getPropertyGenerator();
+        $generator      = $this->getFileGenerator();
+        $indention      = $this->getIndention();
+        $interfaceBar   = $this->getInterfaceGenerator();
+        $interfaceFoo   = $this->getInterfaceGenerator();
+        $methodBar      = $this->getMethodGenerator($generator->getIndention());
+        $methodFoo      = $this->getMethodGenerator($generator->getIndention());
+        $propertyBar    = $this->getPropertyGenerator();
+        $propertyFoo    = $this->getPropertyGenerator();
 
         $generator->addFileContent($content);
         $classBar->setName('bar');
@@ -167,6 +195,8 @@ class FileGeneratorTest extends GeneratorTestCase
         $constantBar->setValue('foo');
         $constantFoo->setName('FOO');
         $constantFoo->setValue(42);
+        $interfaceBar->setName('Bar');
+        $interfaceFoo->setName('Foo');
         $methodBar->setName('bar');
         $methodBar->markAsPublic();
         $methodFoo->setName('foo');
@@ -182,6 +212,8 @@ class FileGeneratorTest extends GeneratorTestCase
         $generator->addClass($classFoo);
         $generator->addConstant($constantBar);
         $generator->addConstant($constantFoo);
+        $generator->addInterface($interfaceBar);
+        $generator->addInterface($interfaceFoo);
         $generator->addProperty($propertyBar);
         $generator->addProperty($propertyFoo);
         $generator->addMethod($methodBar);
@@ -212,6 +244,14 @@ class FileGeneratorTest extends GeneratorTestCase
             $indention . 'protected function foo()' . PHP_EOL .
             $indention . '{' . PHP_EOL .
             $doubledIndention . '//@todo implement' . PHP_EOL .
+            $indention . '}' . PHP_EOL .
+            $indention . PHP_EOL .
+            $indention . 'interface Bar' . PHP_EOL .
+            $indention . '{' . PHP_EOL .
+            $indention . '}' . PHP_EOL .
+            $indention . PHP_EOL .
+            $indention . 'interface Foo' . PHP_EOL .
+            $indention . '{' . PHP_EOL .
             $indention . '}' . PHP_EOL .
             $indention . PHP_EOL .
             $indention . 'class bar' . PHP_EOL .

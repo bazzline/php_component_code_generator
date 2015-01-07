@@ -49,6 +49,17 @@ class FileGenerator extends AbstractDocumentedGenerator
     }
 
     /**
+     * @param InterfaceGenerator $interface
+     * @return $this
+     */
+    public function addInterface(InterfaceGenerator $interface)
+    {
+        $this->addGeneratorProperty('interfaces', $interface);
+
+        return $this;
+    }
+
+    /**
      * @param MethodGenerator $method
      * @return $this
      */
@@ -116,6 +127,7 @@ class FileGenerator extends AbstractDocumentedGenerator
             $this->generateProperties();
             $this->generateTraits();
             $this->generateMethods();
+            $this->generateInterfaces();
             $this->generateClasses();
         }
 
@@ -137,19 +149,7 @@ class FileGenerator extends AbstractDocumentedGenerator
         /** @var null|ConstantGenerator[] $constants */
         $constants = $this->getGeneratorProperty('constants');
 
-        if (is_array($constants)) {
-            if ($this->addEmptyLine) {
-                $this->addContent('');
-            }
-            $lastArrayKey = $this->getLastArrayKey($constants);
-            foreach($constants as $key => $constant) {
-                $this->addGeneratorAsContent($constant);
-                if ($key !== $lastArrayKey) {
-                    $this->addContent('');
-                }
-            }
-            $this->addEmptyLine = true;
-        }
+        $this->addContentFromCollectionTwo($constants);
     }
 
     private function generateProperties()
@@ -157,19 +157,7 @@ class FileGenerator extends AbstractDocumentedGenerator
         /** @var null|PropertyGenerator[] $properties */
         $properties = $this->getGeneratorProperty('properties');
 
-        if (is_array($properties)) {
-            if ($this->addEmptyLine) {
-                $this->addContent('');
-            }
-            $lastArrayKey = $this->getLastArrayKey($properties);
-            foreach($properties as $key => $property) {
-                $this->addGeneratorAsContent($property);
-                if ($key !== $lastArrayKey) {
-                    $this->addContent('');
-                }
-            }
-        }
-        $this->addEmptyLine = true;
+        $this->addContentFromCollectionTwo($properties);
     }
 
     private function generateTraits()
@@ -177,19 +165,7 @@ class FileGenerator extends AbstractDocumentedGenerator
         /** @var null|array $traits */
         $traits = $this->getGeneratorProperty('traits');
 
-        if (is_array($traits)) {
-            if ($this->addEmptyLine) {
-                $this->addContent('');
-            }
-            $lastArrayKey = $this->getLastArrayKey($traits);
-            foreach($traits as $key => $trait) {
-                $this->addGeneratorAsContent($trait);
-                if ($key !== $lastArrayKey) {
-                    $this->addContent('');
-                }
-            }
-        }
-        $this->addEmptyLine = true;
+        $this->addContentFromCollectionTwo($traits);
     }
 
     private function generateMethods()
@@ -197,19 +173,7 @@ class FileGenerator extends AbstractDocumentedGenerator
         /** @var null|MethodGenerator[] $methods */
         $methods = $this->getGeneratorProperty('methods');
 
-        if (is_array($methods)) {
-            if ($this->addEmptyLine) {
-                $this->addContent('');
-            }
-            $lastArrayKey = $this->getLastArrayKey($methods);
-            foreach($methods as $key => $method) {
-                $this->addGeneratorAsContent($method);
-                if ($key !== $lastArrayKey) {
-                    $this->addContent('');
-                }
-            }
-        }
-        $this->addEmptyLine = true;
+        $this->addContentFromCollectionTwo($methods);
     }
 
     private function generateClasses()
@@ -217,18 +181,57 @@ class FileGenerator extends AbstractDocumentedGenerator
         /** @var null|ClassGenerator[] $classes */
         $classes = $this->getGeneratorProperty('classes');
 
-        if (is_array($classes)) {
+        $this->addContentFromCollection($classes);
+    }
+
+    private function generateInterfaces()
+    {
+        /** @var null|InterfaceGenerator[] $interfaces */
+        $interfaces = $this->getGeneratorProperty('interfaces');
+
+        $this->addContentFromCollection($interfaces);
+    }
+
+    /**
+     * @param null|array $collection
+     * @todo figure out difference between addContentFromCollection and
+     *  addContentFromCollectionTwo and express difference with fitting names
+     */
+    private function addContentFromCollection($collection)
+    {
+        if (is_array($collection)) {
             if ($this->addEmptyLine) {
                 $this->addContent('');
             }
-            $arrayKeys = array_keys($classes);
-            $lastArrayKey = array_pop($arrayKeys);
-            foreach($classes as $key => $class) {
-                $this->addGeneratorAsContent($class);
-                if ($key !== $lastArrayKey) {
+            $keys = array_keys($collection);
+            $lastKey = array_pop($keys);
+
+            foreach($collection as $key => $item) {
+                $this->addGeneratorAsContent($item);
+                if ($key !== $lastKey) {
                     $this->addContent('');
                 }
             }
         }
+    }
+
+    /**
+     * @param null|array $collection
+     */
+    private function addContentFromCollectionTwo($collection)
+    {
+        if (is_array($collection)) {
+            if ($this->addEmptyLine) {
+                $this->addContent('');
+            }
+            $lastKey = $this->getLastArrayKey($collection);
+            foreach($collection as $key => $item) {
+                $this->addGeneratorAsContent($item);
+                if ($key !== $lastKey) {
+                    $this->addContent('');
+                }
+            }
+        }
+        $this->addEmptyLine = true;
     }
 }
