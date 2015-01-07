@@ -86,6 +86,7 @@ Thanks to [apigen](https://github.com/apigen/apigen), the api is available in th
         * covered new code with unit tests
         * updated InterfaceExample
     * updated dependencies
+    * [migration](https://github.com/bazzline/php_component_code_generator/blob/master/migration/1.0.1_to_1.1.0.md) needed
 * [1.0.1](https://github.com/bazzline/php_component_code_generator/tree/1.0.1) - released at 31.08.2014
     * transfered project to bazzline
     * updated dependencies
