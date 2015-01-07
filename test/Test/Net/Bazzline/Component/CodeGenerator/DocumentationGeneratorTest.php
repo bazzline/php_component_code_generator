@@ -56,6 +56,19 @@ class DocumentationGeneratorTest extends GeneratorTestCase
         $this->assertEquals($expectedString, $generator->generate());
     }
 
+    public function testWithInterface()
+    {
+        $generator = $this->getDocumentationGenerator();
+        $generator->setInterface('UnitTest');
+
+        $expectedString =
+            '/**' . PHP_EOL .
+            ' * Interface UnitTest' .  PHP_EOL .
+            ' */';
+
+        $this->assertEquals($expectedString, $generator->generate());
+    }
+
     public function testWithPackage()
     {
         $generator = $this->getDocumentationGenerator();

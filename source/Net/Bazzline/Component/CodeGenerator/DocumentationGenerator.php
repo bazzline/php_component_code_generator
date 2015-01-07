@@ -43,6 +43,17 @@ class DocumentationGenerator extends AbstractGenerator
     }
 
     /**
+     * @param $interfaceName
+     * @return $this
+     */
+    public function setInterface($interfaceName)
+    {
+        $this->addGeneratorProperty('interface', (string) $interfaceName, false);
+
+        return $this;
+    }
+
+    /**
      * @param string $package
      * @return $this
      */
@@ -187,6 +198,7 @@ class DocumentationGenerator extends AbstractGenerator
             $this->addContent('/**');
             $this->generateSees();
             $this->generateComments();
+            $this->generateInterface();
             $this->generateClass();
             $this->generatePackage();
             $this->generateToDoS();
@@ -232,6 +244,22 @@ class DocumentationGenerator extends AbstractGenerator
             }
 
             $line = $this->getLineGenerator(' * Class ' . $class);
+            $this->addContent($line);
+            $this->addEmptyLine = true;
+        }
+    }
+
+    private function generateInterface()
+    {
+        $interface = $this->getGeneratorProperty('interface');
+
+        if (is_string($interface)) {
+            if ($this->addEmptyLine) {
+                $this->addContent(' *');
+                $this->addEmptyLine = false;
+            }
+
+            $line = $this->getLineGenerator(' * Interface ' . $interface);
             $this->addContent($line);
             $this->addEmptyLine = true;
         }

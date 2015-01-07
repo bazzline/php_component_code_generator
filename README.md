@@ -77,9 +77,11 @@ Thanks to [apigen](https://github.com/apigen/apigen), the api is available in th
 
 # History
 
-* [1.1.2](https://github.com/bazzline/php_component_code_generator/tree/1.1.2) - not yet released
+* [1.1.3](https://github.com/bazzline/php_component_code_generator/tree/1.1.3) - not yet released
+* [1.1.2](https://github.com/bazzline/php_component_code_generator/tree/1.1.2) - released at 07.01.2014
+    * added support for InterfaceGenertor to DocumentationGenerator
 * [1.1.1](https://github.com/bazzline/php_component_code_generator/tree/1.1.1) - released at 07.01.2014
-    * added InterfaceGenerator support to FileGenerator
+    * added support for InterfaceGenertor to FileGenerator
 * [1.1.0](https://github.com/bazzline/php_component_code_generator/tree/1.1.0) - released at 06.01.2014
     * added api
     * fixed a bug in class generator by creating a interface generator
