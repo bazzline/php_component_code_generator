@@ -4,11 +4,16 @@
  * @author stev leibelt <artodeto@bazzline.net>
  * @since 2015-02-07
  */
+$path = __DIR__;
+//delete
+$command = 'rm -fr ' . $path . '/document/*';
+passthru($command);
 
+//generate
 $options = array(
-    '--source source/Net/Bazzline/Component/CodeGenerator/',
-    '--destination document/',
+    '--source ' . $path . '/source/Net/Bazzline/Component/CodeGenerator/',
+    '--destination ' . $path . '/document/',
     ' --title "Code Generator by Bazzline"'
 );
-$command = 'php vendor/bin/apigen generate ' . implode(' ', $options);
+$command = 'php ' . $path . '/vendor/bin/apigen generate ' . implode(' ', $options);
 passthru($command);
