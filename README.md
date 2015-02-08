@@ -78,7 +78,7 @@ Thanks to [apigen](https://github.com/apigen/apigen), the api is available in th
 # History
 
 * upcomming
-* [1.1.4](https://github.com/bazzline/php_component_code_generator/tree/1.1.4) - not yet released
+* [1.1.4](https://github.com/bazzline/php_component_code_generator/tree/1.1.4) - released at 08.02.2015
     * removed dependency to apigen
 * [1.1.3](https://github.com/bazzline/php_component_code_generator/tree/1.1.3) - released at 07.01.2015
     * fixed bug in SignatureGenerator when auto generating Documentation as Interface
