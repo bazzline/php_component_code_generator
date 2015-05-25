@@ -1,6 +1,6 @@
 # PHP Code Generator
 
-This project aims to deliver a easy to use php code generator.
+This project aims to deliver a easy to use free as in freedom php code generator.
 PHPDOC-Generation is also implemented as general generation tasks like "class", "function" or "property" generation.
 
 The build status of the current master branch is tracked by Travis CI: 
