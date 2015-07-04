@@ -18,8 +18,7 @@
     },
     "require-dev": {
         "mockery/mockery": "0.9.4",
-        "phpmd/phpmd": "2.2.3",
-        "phpunit/phpunit": "4.7.5"
+        "phpunit/phpunit": "4.7.6"
     },
     "autoload": {
         "psr-0": {
