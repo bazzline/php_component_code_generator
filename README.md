@@ -50,21 +50,6 @@ Take a look on [ohloh.net](https://www.ohloh.net/p/php_component_code_generator)
 
 Thanks to [apigen](https://github.com/apigen/apigen), the api is available in the [document](https://github.com/bazzline/php_component_code_generator/blob/master/document/index.html) section or [online](http://code.bazzline.net/).
 
-# Future Improvements
-
-* implement possibility to use some ["pre defined" methods](https://github.com/wells5609/CodeGenerator/tree/master/src/CodeGenerator/Method) for generation
-* remove @todo's in source code
-* implement method ordering by visibility and final|!final status in ClassGenerator to get some automatic ordering of public|protected|private methods for generation
-* [flavour api](https://github.com/propelorm/Propel/blob/master/generator/lib/builder/om/OMBuilder.php)
-* [extend trait](https://github.com/Speicher210/CodeGenerator/blob/master/docs/php/oop/generate-trait.md)
-* [extend indention](https://github.com/Speicher210/CodeGenerator/blob/master/src/Wingu/OctopusCore/CodeGenerator/GeneratorInterface.php)
-* implement [annotation](https://github.com/Speicher210/CodeGenerator/tree/master/src/Wingu/OctopusCore/CodeGenerator/PHP/Annotation)
-* implement validation
-* use symfony console and commands
-    * add user interaction (ask if file should be overwritten/saved
-* what about something like [that](https://github.com/zetacomponents/PhpGenerator/blob/master/docs/example_general.php)
-* implement [automatically documentation](https://github.com/wells5609/CodeGenerator) (validate if this is still better than current approach)
-
 # Inspired By
 
 * [php-generator](https://github.com/nette/php-generator)
@@ -78,6 +63,21 @@ Thanks to [apigen](https://github.com/apigen/apigen), the api is available in th
 # History
 
 * upcomming
+    *@todo
+        * implement possibility to use some ["pre defined" methods](https://github.com/wells5609/CodeGenerator/tree/master/src/CodeGenerator/Method) for generation
+        * remove @todo's in source code
+        * implement method ordering by visibility and final|!final status in ClassGenerator to get some automatic ordering of public|protected|private methods for generation
+        * [flavour api](https://github.com/propelorm/Propel/blob/master/generator/lib/builder/om/OMBuilder.php)
+        * [extend trait](https://github.com/Speicher210/CodeGenerator/blob/master/docs/php/oop/generate-trait.md)
+        * [extend indention](https://github.com/Speicher210/CodeGenerator/blob/master/src/Wingu/OctopusCore/CodeGenerator/GeneratorInterface.php)
+        * implement [annotation](https://github.com/Speicher210/CodeGenerator/tree/master/src/Wingu/OctopusCore/CodeGenerator/PHP/Annotation)
+        * implement validation
+        * use symfony console and commands
+            * add user interaction (ask if file should be overwritten/saved
+        * what about something like [that](https://github.com/zetacomponents/PhpGenerator/blob/master/docs/example_general.php)
+        * implement [automatically documentation](https://github.com/wells5609/CodeGenerator) (validate if this is still better than current approach)
+* [1.1.9](https://github.com/bazzline/php_component_code_generator/tree/1.1.9) - released at 08.11.2015
+    * updated dependencies
 * [1.1.8](https://github.com/bazzline/php_component_code_generator/tree/1.1.8) - released at 21.08.2015
     * updated dependencies
 * [1.1.7](https://github.com/bazzline/php_component_code_generator/tree/1.1.7) - released at 29.07.2015
