@@ -76,6 +76,9 @@ Thanks to [apigen](https://github.com/apigen/apigen), the api is available in th
             * add user interaction (ask if file should be overwritten/saved
         * what about something like [that](https://github.com/zetacomponents/PhpGenerator/blob/master/docs/example_general.php)
         * implement [automatically documentation](https://github.com/wells5609/CodeGenerator) (validate if this is still better than current approach)
+* [1.1.11](https://github.com/bazzline/php_component_code_generator/tree/1.1.11) - released at 20.02.2016
+    * moved to psr-4 autoloading
+    * updated dependencies
 * [1.1.10](https://github.com/bazzline/php_component_code_generator/tree/1.1.10) - released at 11.12.2015
     * updated dependencies
 * [1.1.9](https://github.com/bazzline/php_component_code_generator/tree/1.1.9) - released at 08.11.2015
