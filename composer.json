@@ -1,6 +1,16 @@
 {
     "description": "free as in freedom component to generate php code for class, file, method, property, constant, documentation",
-    "keywords": ["php", "generator", "phpdoc", "php code generator", "lgpl", "free as in freedom"],
+    "keywords": [
+        "bazzline",
+        "psr-4",
+        "psr",
+        "php", 
+        "generator", 
+        "phpdoc", 
+        "php code generator", 
+        "lgpl", 
+        "free as in freedom"
+    ],
     "license": "LGPLv3",
     "name": "net_bazzline/php_component_code_generator",
     "type": "library",
