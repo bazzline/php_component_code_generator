@@ -21,13 +21,17 @@ Take a look on [ohloh.net](https://www.ohloh.net/p/php_component_code_generator)
 
 ## By Hand
 
-    mkdir -p vendor/net_bazzline/php_component_code_generator
-    cd vendor/net_bazzline/php_component_code_generator
-    git clone https://github.com/bazzline/php_component_code_generator .
+```
+mkdir -p vendor/net_bazzline/php_component_code_generator
+cd vendor/net_bazzline/php_component_code_generator
+git clone https://github.com/bazzline/php_component_code_generator .
+```
 
 ## With [Packagist](https://packagist.org/packages/net_bazzline/php_component_code_generator)
 
-    composer require net_bazzline/php_component_code_generator:dev-master
+```
+composer require net_bazzline/php_component_code_generator:dev-master
+```
 
 # Benefits
 
@@ -48,7 +52,7 @@ Take a look on [ohloh.net](https://www.ohloh.net/p/php_component_code_generator)
 
 # API
 
-Thanks to [apigen](https://github.com/apigen/apigen), the api is available in the [document](https://github.com/bazzline/php_component_code_generator/blob/master/document/index.html) section or [online](http://code.bazzline.net/).
+[API](http://www.bazzline.net/57b93db867f58f6bf2982833765721032a5ea22b/index.html) is available at [bazzline.net](http://www.bazzline.net).
 
 # Inspired By
 
@@ -64,6 +68,7 @@ Thanks to [apigen](https://github.com/apigen/apigen), the api is available in th
 
 * upcomming
     *@todo
+        * add api link
         * implement possibility to use some ["pre defined" methods](https://github.com/wells5609/CodeGenerator/tree/master/src/CodeGenerator/Method) for generation
         * remove @todo's in source code
         * implement method ordering by visibility and final|!final status in ClassGenerator to get some automatic ordering of public|protected|private methods for generation
@@ -77,7 +82,7 @@ Thanks to [apigen](https://github.com/apigen/apigen), the api is available in th
         * what about something like [that](https://github.com/zetacomponents/PhpGenerator/blob/master/docs/example_general.php)
         * implement [automatically documentation](https://github.com/wells5609/CodeGenerator) (validate if this is still better than current approach)
     * added integration testing for php 7.0
-    * removed integration testing for php 5.3.3
+    * removed integration testing for php < 5.6
 * [1.1.11](https://github.com/bazzline/php_component_code_generator/tree/1.1.11) - released at 20.02.2016
     * moved to psr-4 autoloading
     * updated dependencies
