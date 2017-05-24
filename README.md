@@ -83,6 +83,7 @@ composer require net_bazzline/php_component_code_generator:dev-master
         * implement [automatically documentation](https://github.com/wells5609/CodeGenerator) (validate if this is still better than current approach)
     * added integration testing for php 7.0
     * removed integration testing for php < 5.6
+    * removed shipped with api documentation
 * [1.1.11](https://github.com/bazzline/php_component_code_generator/tree/1.1.11) - released at 20.02.2016
     * moved to psr-4 autoloading
     * updated dependencies
