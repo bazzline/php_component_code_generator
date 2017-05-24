@@ -17,6 +17,8 @@ This component comes with a lot of [examples](https://github.com/bazzline/php_co
 
 Take a look on [ohloh.net](https://www.ohloh.net/p/php_component_code_generator).
 
+The current change log can be found [here](https://github.com/bazzline/php_component_code_generator/blob/master/CHANGELOG.md).
+
 # Install
 
 ## By Hand
@@ -64,74 +66,6 @@ composer require net_bazzline/php_component_code_generator:dev-master
 * [php-token-reflection](https://github.com/Andrewsville/PHP-Token-Reflection)
 * [code-generator](https://github.com/Speicher210/CodeGenerator)
 
-# History
+# Final Words
 
-* upcomming
-    *@todo
-        * add type hint "array" wherever possible and not only in the documentation
-        * implement possibility to use some ["pre defined" methods](https://github.com/wells5609/CodeGenerator/tree/master/src/CodeGenerator/Method) for generation
-        * remove @todo's in source code
-        * implement method ordering by visibility and final|!final status in ClassGenerator to get some automatic ordering of public|protected|private methods for generation
-        * [flavour api](https://github.com/propelorm/Propel/blob/master/generator/lib/builder/om/OMBuilder.php)
-        * [extend trait](https://github.com/Speicher210/CodeGenerator/blob/master/docs/php/oop/generate-trait.md)
-        * [extend indention](https://github.com/Speicher210/CodeGenerator/blob/master/src/Wingu/OctopusCore/CodeGenerator/GeneratorInterface.php)
-        * implement [annotation](https://github.com/Speicher210/CodeGenerator/tree/master/src/Wingu/OctopusCore/CodeGenerator/PHP/Annotation)
-        * implement validation
-        * use symfony console and commands
-            * add user interaction (ask if file should be overwritten/saved
-        * what about something like [that](https://github.com/zetacomponents/PhpGenerator/blob/master/docs/example_general.php)
-        * implement [automatically documentation](https://github.com/wells5609/CodeGenerator) (validate if this is still better than current approach)
-    * added api link
-    * added integration testing for php 7.0
-    * replaced deprecated array syntax with new one
-    * removed integration testing for php < 5.6
-    * removed shipped with api documentation
-* [1.1.11](https://github.com/bazzline/php_component_code_generator/tree/1.1.11) - released at 20.02.2016
-    * moved to psr-4 autoloading
-    * updated dependencies
-* [1.1.10](https://github.com/bazzline/php_component_code_generator/tree/1.1.10) - released at 11.12.2015
-    * updated dependencies
-* [1.1.9](https://github.com/bazzline/php_component_code_generator/tree/1.1.9) - released at 08.11.2015
-    * updated dependencies
-* [1.1.8](https://github.com/bazzline/php_component_code_generator/tree/1.1.8) - released at 21.08.2015
-    * updated dependencies
-* [1.1.7](https://github.com/bazzline/php_component_code_generator/tree/1.1.7) - released at 29.07.2015
-    * updated dependencies
-* [1.1.6](https://github.com/bazzline/php_component_code_generator/tree/1.1.6) - released at 04.07.2015
-    * updated dependencies
-* [1.1.5](https://github.com/bazzline/php_component_code_generator/tree/1.1.5) - released at 22.05.2015
-    * updated dependencies
-* [1.1.4](https://github.com/bazzline/php_component_code_generator/tree/1.1.4) - released at 08.02.2015
-    * removed dependency to apigen
-* [1.1.3](https://github.com/bazzline/php_component_code_generator/tree/1.1.3) - released at 07.01.2015
-    * fixed bug in SignatureGenerator when auto generating Documentation as Interface
-* [1.1.2](https://github.com/bazzline/php_component_code_generator/tree/1.1.2) - released at 07.01.2015
-    * added support for InterfaceGenerator to DocumentationGenerator
-* [1.1.1](https://github.com/bazzline/php_component_code_generator/tree/1.1.1) - released at 07.01.2015
-    * added support for InterfaceGenerator to FileGenerator
-* [1.1.0](https://github.com/bazzline/php_component_code_generator/tree/1.1.0) - released at 06.01.2015
-    * added api
-    * fixed a bug in class generator by creating a interface generator
-        * by using a interface generator, it is now possible to create an interface that extends more than one interface
-        * created a general SignatureGenerator (extended by InterfaceGenerator and ClassGenerator)
-        * covered new code with unit tests
-        * updated InterfaceExample
-    * updated dependencies
-    * [migration](https://github.com/bazzline/php_component_code_generator/blob/master/migration/1.0.1_to_1.1.0.md) needed
-* [1.0.1](https://github.com/bazzline/php_component_code_generator/tree/1.0.1) - released at 31.08.2014
-    * transfered project to bazzline
-    * updated dependencies
-* [1.0.0](https://github.com/bazzline/php_component_code_generator/tree/1.0.0) - released at 27.07.2014
-    * added example for [interface generator](https://github.com/bazzline/php_component_code_generator/tree/1.0.0/example/InterfaceExample.php)
-    * added example for [file generator](https://github.com/bazzline/php_component_code_generator/tree/1.0.0/example/FileExample.php)
-* [0.0.3](https://github.com/bazzline/php_component_code_generator/tree/0.0.3) - released at 10.06.2014
-    * fixed broken strict tests
-    * fixed invalid generation of interfaces
-* [0.0.2](https://github.com/bazzline/php_component_code_generator/tree/0.0.2) - released at 05.06.2014
-    * fixed bug in BlockGenerator::startIndention() - now multiple calls are supported
-    * added method Indention::isSetToInitialLevel();
-    * fixed logical bug by replacing "addExtends" to "setExtends" since it is not allowed to extend from more than one class
-* [0.0.1](https://github.com/bazzline/php_component_code_generator/tree/0.0.1) - released at 25.05.2014
-    * covered main code with tests
-    * created [examples](https://github.com/bazzline/php_component_code_generator/tree/0.0.1/example)
-    * created [factories](https://github.com/bazzline/php_component_code_generator/tree/0.0.1/source/Net/Bazzline/Component/CodeGenerator/Factory)
+Star it if you like it :-). Add issues if you need it. Pull patches if you enjoy it. Write a blog entry if you use it. [Donate something](https://gratipay.com/~stevleibelt) if you love it :-].
