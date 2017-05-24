@@ -21,12 +21,12 @@ class MethodGenerator extends AbstractDocumentedGenerator
      */
     public function addParameter($name, $defaultValue = '', $typeHint = '', $isReference = false)
     {
-        $parameter = array(
+        $parameter = [
             'default_value' => $defaultValue,
             'name'          => $name,
             'is_reference'  => $isReference,
             'type_hint'     => $typeHint
-        );
+        ];
 
         $this->addGeneratorProperty('parameters', $parameter);
 
@@ -41,10 +41,10 @@ class MethodGenerator extends AbstractDocumentedGenerator
      */
     public function addSince($version, $description = '')
     {
-        $since = array(
+        $since = [
             'description'   => $description,
             'version'       => $version
-        );
+        ];
 
         $this->addGeneratorProperty('since_versions', $since);
 
@@ -64,7 +64,7 @@ class MethodGenerator extends AbstractDocumentedGenerator
      * @param array $returnValueTypeHints
      * @return $this
      */
-    public function setBody($body, $returnValueTypeHints = array())
+    public function setBody($body, $returnValueTypeHints = [])
     {
         $this->addGeneratorProperty('body', $body, false);
         $this->addGeneratorProperty('has_body', true, false);
@@ -171,7 +171,7 @@ class MethodGenerator extends AbstractDocumentedGenerator
 
     private function generateBody()
     {
-        $body       = $this->getGeneratorProperty('body', array('//@todo implement'));
+        $body       = $this->getGeneratorProperty('body', ['//@todo implement']);
         $isAbstract = $this->getGeneratorProperty('abstract', false);
         $hasBody    = $this->getGeneratorProperty('has_body', true);
 
@@ -181,7 +181,9 @@ class MethodGenerator extends AbstractDocumentedGenerator
             if (!($body instanceof BlockGenerator)
                 || !($body instanceof LineGenerator)) {
                 if (!is_array($body)) {
-                    $body = array($body);
+                    $body = [
+                        $body
+                    ];
                 }
                 $body = $this->getBlockGenerator($body);
             }
@@ -199,7 +201,7 @@ class MethodGenerator extends AbstractDocumentedGenerator
 
         if ($documentation instanceof DocumentationGenerator) {
             if ($this->completeDocumentationAutomatically === true) {
-                $parameters         = $this->getGeneratorProperty('parameters', array());
+                $parameters         = $this->getGeneratorProperty('parameters', []);
                 $returnTypeHints    = $this->getGeneratorProperty('body_return_value_type_hints');
 
                 foreach ($parameters as $parameter) {
@@ -221,7 +223,7 @@ class MethodGenerator extends AbstractDocumentedGenerator
             $isFinal        = $this->getGeneratorProperty('final', false);
             $isStatic       = $this->getGeneratorProperty('static', false);
             $name           = $this->getGeneratorProperty('name');
-            $parameters     = $this->getGeneratorProperty('parameters', array());
+            $parameters     = $this->getGeneratorProperty('parameters', []);
             $visibility     = $this->getGeneratorProperty('visibility');
 
             //@todo refactor the wired usage for line and block generator

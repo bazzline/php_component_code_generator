@@ -46,10 +46,10 @@ class SignatureGenerator extends AbstractDocumentedGenerator
      */
     public function addUse($fullQualifiedClassName, $alias = '')
     {
-        $use = array(
+        $use = [
             'alias' => $alias,
             'name'  => $fullQualifiedClassName
-        );
+        ];
 
         $this->addGeneratorProperty('uses', $use);
 

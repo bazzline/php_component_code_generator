@@ -70,14 +70,14 @@ class MethodGeneratorTest extends GeneratorTestCase
 
     public function testWithBody()
     {
-        $body = array(
+        $body = [
             '$bar = new Bar();',
             '$foo = new Foo();',
             '$foobar->add($bar);',
             '$foobar->add($foo);',
             '',
             'return $foobar'
-        );
+        ];
 
         $generator = $this->getMethodGenerator();
         $generator->setName('unittest');
@@ -219,7 +219,14 @@ class MethodGeneratorTest extends GeneratorTestCase
         $generator->addParameter('foo', '', 'string');
         $generator->setName('unittest');
         $generator->markAsPublic();
-        $generator->setBody(array('return int($foo);'), array('int'));
+        $generator->setBody(
+            [
+                'return int($foo);'
+            ], 
+            [
+                'int'
+            ]
+        );
 
         $indention = $this->getIndention();
         $indention->increaseLevel();
@@ -266,14 +273,14 @@ class MethodGeneratorTest extends GeneratorTestCase
 
     public function testWithALot()
     {
-        $body = array(
+        $body = [
             '$bar = new Bar();',
             '$foo = new Foo();',
             '$foobar->add($bar);',
             '$foobar->add($foo);',
             '',
             'return $foobar'
-        );
+        ];
 
         $generator = $this->getMethodGenerator();
         $generator->setBody($body);

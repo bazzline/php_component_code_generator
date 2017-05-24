@@ -62,15 +62,15 @@ class LineGeneratorTest extends GeneratorTestCase
 
     public function testAddNestedArray()
     {
-        $contentAsArray = array(
-            array('there'),
-            array('is'),
-            array('no'),
-            array('f', 'o', 'o'),
-            array('without'),
-            array('a'),
-            array('b', 'a', 'r')
-        );
+        $contentAsArray = [
+            ['there'],
+            ['is'],
+            ['no'],
+            ['f', 'o', 'o'],
+            ['without'],
+            ['a'],
+            ['b', 'a', 'r']
+        ];
         $expectedContent = 'there is no f o o without a b a r';
         $indention = $this->getIndention();
         $line = $this->getLineGenerator();

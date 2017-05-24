@@ -14,7 +14,7 @@ namespace Net\Bazzline\Component\CodeGenerator;
 class LineGenerator extends AbstractContentGenerator
 {
     /** @var array|string[] */
-    private $content = array();
+    private $content = [];
 
     /** @var string */
     private $separator = ' ';
@@ -56,7 +56,7 @@ class LineGenerator extends AbstractContentGenerator
 
     public function clear()
     {
-        $this->content = array();
+        $this->content = [];
     }
 
     /**

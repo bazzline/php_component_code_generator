@@ -31,7 +31,7 @@ class GeneratorTestCase extends PHPUnit_Framework_TestCase
     /**
      * @var array
      */
-    private $factoryInstancePool = array();
+    private $factoryInstancePool = [];
 
     //----begin of general----
     protected function tearDown()

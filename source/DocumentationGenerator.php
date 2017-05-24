@@ -70,13 +70,13 @@ class DocumentationGenerator extends AbstractGenerator
      * @param string $comment
      * @return $this
      */
-    public function addParameter($name, $typeHints = array(), $comment = '')
+    public function addParameter($name, $typeHints = [], $comment = '')
     {
-        $parameter = array(
+        $parameter = [
             'comment'       => (string) $comment,
             'name'          => (string) $name,
             'type_hints'    => (array) $typeHints
-        );
+        ];
 
         $this->addGeneratorProperty('parameters', $parameter);
 
@@ -90,10 +90,10 @@ class DocumentationGenerator extends AbstractGenerator
      */
     public function setReturn($typeHints, $comment = '')
     {
-        $return = array(
+        $return = [
             'comment'       => (string) $comment,
             'type_hints'    => (array) $typeHints
-        );
+        ];
 
         $this->addGeneratorProperty('return', $return, false);
 
@@ -140,10 +140,10 @@ class DocumentationGenerator extends AbstractGenerator
      */
     public function setAuthor($name, $email = '')
     {
-        $author = array(
+        $author = [
             'email' => (string) $email,
             'name'  => (string) $name
-        );
+        ];
 
         $this->addGeneratorProperty('author', $author, false);
 
@@ -155,12 +155,12 @@ class DocumentationGenerator extends AbstractGenerator
      * @param array $typeHints
      * @return $this
      */
-    public function setVariable($name, $typeHints = array())
+    public function setVariable($name, $typeHints = [])
     {
-        $variable = array(
+        $variable = [
             'name'          => $name,
             'type_hints'    => $typeHints
-        );
+        ];
 
         $this->addGeneratorProperty('variable', $variable, false);
 
@@ -175,10 +175,10 @@ class DocumentationGenerator extends AbstractGenerator
      */
     public function setVersion($number, $description = '')
     {
-        $version = array(
+        $version = [
             'description'   => (string) $description,
             'number'        => (string) $number
-        );
+        ];
         $this->addGeneratorProperty('version', $version, false);
 
         return $this;

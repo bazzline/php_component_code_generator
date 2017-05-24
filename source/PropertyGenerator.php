@@ -99,7 +99,7 @@ class PropertyGenerator extends AbstractDocumentedGenerator
         $documentation  = $this->getGeneratorProperty('documentation');
         $isStatic       = $this->getGeneratorProperty('static', false);
         $name           = $this->getGeneratorProperty('name');
-        $typeHints      = $this->getGeneratorProperty('type_hints', array());
+        $typeHints      = $this->getGeneratorProperty('type_hints', []);
         $value          = $this->getGeneratorProperty('value');
         $visibility     = $this->getGeneratorProperty('visibility');
 

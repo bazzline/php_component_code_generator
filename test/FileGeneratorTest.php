@@ -156,9 +156,9 @@ class FileGeneratorTest extends GeneratorTestCase
 
     public function testWithContent()
     {
-        $content = array(
+        $content = [
             '//@todo implement',
-        );
+        ];
         $generator = $this->getFileGenerator();
 
         $indention = $this->getIndention();
@@ -176,9 +176,9 @@ class FileGeneratorTest extends GeneratorTestCase
         $classFoo       = $this->getClassGenerator();
         $constantBar    = $this->getConstantGenerator();
         $constantFoo    = $this->getConstantGenerator();
-        $content        = array(
+        $content        = [
             '//@todo implement',
-        );
+        ];
         $generator      = $this->getFileGenerator();
         $indention      = $this->getIndention();
         $interfaceBar   = $this->getInterfaceGenerator();

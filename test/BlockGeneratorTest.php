@@ -80,15 +80,15 @@ class BlockGeneratorTest extends GeneratorTestCase
 
     public function testAddNestedArray()
     {
-        $contentAsArray = array(
-            array('there'),
-            array('is'),
-            array('no'),
-            array('f', 'o', 'o'),
-            array('without'),
-            array('a'),
-            array('b', 'a', 'r')
-        );
+        $contentAsArray = [
+            ['there'],
+            ['is'],
+            ['no'],
+            ['f', 'o', 'o'],
+            ['without'],
+            ['a'],
+            ['b', 'a', 'r']
+        ];
         $expectedContent =
             'there' . PHP_EOL .
             'is' . PHP_EOL .
@@ -110,15 +110,15 @@ class BlockGeneratorTest extends GeneratorTestCase
 
     public function testAddNestedArrayWithIndention()
     {
-        $contentAsArray = array(
-            array('there'),
-            array('is'),
-            array('no'),
-            array('f', 'o', 'o'),
-            array('without'),
-            array('a'),
-            array('b', 'a', 'r')
-        );
+        $contentAsArray = [
+            ['there'],
+            ['is'],
+            ['no'],
+            ['f', 'o', 'o'],
+            ['without'],
+            ['a'],
+            ['b', 'a', 'r']
+        ];
         $block = $this->getBlockGenerator();
         $indention = $block->getIndention();
         $expectedContent =

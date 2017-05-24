@@ -22,7 +22,7 @@ class BlockGenerator extends AbstractContentGenerator implements LineGeneratorDe
     /**
      * @var array|BlockGenerator[]|LineGenerator[]
      */
-    private $content = array();
+    private $content = [];
 
     /**
      * @var LineGenerator
@@ -96,7 +96,7 @@ class BlockGenerator extends AbstractContentGenerator implements LineGeneratorDe
      */
     public function clear()
     {
-        $this->content = array();
+        $this->content = [];
 
         return $this;
     }

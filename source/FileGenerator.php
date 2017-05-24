@@ -96,7 +96,9 @@ class FileGenerator extends AbstractDocumentedGenerator
     public function addFileContent($content)
     {
         if (!is_array($content)) {
-            $content = array($content);
+            $content = [
+                $content
+            ];
         }
 
         foreach ($content as $partial) {
@@ -136,7 +138,7 @@ class FileGenerator extends AbstractDocumentedGenerator
 
     private function generateContent()
     {
-        $content = $this->getGeneratorProperty('content', array());
+        $content = $this->getGeneratorProperty('content', []);
 
         foreach ($content as $partial) {
             $this->addContent($partial);

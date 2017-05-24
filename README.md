@@ -68,7 +68,7 @@ composer require net_bazzline/php_component_code_generator:dev-master
 
 * upcomming
     *@todo
-        * add api link
+        * add type hint "array" wherever possible and not only in the documentation
         * implement possibility to use some ["pre defined" methods](https://github.com/wells5609/CodeGenerator/tree/master/src/CodeGenerator/Method) for generation
         * remove @todo's in source code
         * implement method ordering by visibility and final|!final status in ClassGenerator to get some automatic ordering of public|protected|private methods for generation
@@ -81,7 +81,9 @@ composer require net_bazzline/php_component_code_generator:dev-master
             * add user interaction (ask if file should be overwritten/saved
         * what about something like [that](https://github.com/zetacomponents/PhpGenerator/blob/master/docs/example_general.php)
         * implement [automatically documentation](https://github.com/wells5609/CodeGenerator) (validate if this is still better than current approach)
+    * added api link
     * added integration testing for php 7.0
+    * replaced deprecated array syntax with new one
     * removed integration testing for php < 5.6
     * removed shipped with api documentation
 * [1.1.11](https://github.com/bazzline/php_component_code_generator/tree/1.1.11) - released at 20.02.2016

@@ -30,23 +30,23 @@ class DTOGeneratorExample extends AbstractExample
         $class->setDocumentation($documentationFactory->create());
         $class->setName('ExampleDTO');
 
-        $properties = array(
-            array(
-                'name' => 'foo',
-                'typeHint' => null,
-                'value' => 42
-            ),
-            array(
-                'name' => 'foobar',
-                'typeHint' => 'array',
-                'value' => null
-            ),
-            array(
-                'name' => 'bar',
-                'typeHint' => 'Bar',
-                'value' => null
-            )
-        );
+        $properties = [
+            [
+                'name'      => 'foo',
+                'typeHint'  => null,
+                'value'     => 42
+            ],
+            [
+                'name'      => 'foobar',
+                'typeHint'  => 'array',
+                'value'     => null
+            ],
+            [
+                'name'      => 'bar',
+                'typeHint'  => 'Bar',
+                'value'     => null
+            ]
+        ];
 
         foreach ($properties as $value) {
             //---- begin of properties
@@ -64,7 +64,14 @@ class DTOGeneratorExample extends AbstractExample
             $getterMethod = $methodFactory->create();
             $getterMethod->setDocumentation($documentationFactory->create());
             $getterMethod->setName('get' . ucfirst($value['name']));
-            $getterMethod->setBody(array('$this->' . $value['name'] . ' = $' . $value['name'] . ';'), array($value['typeHint']));
+            $getterMethod->setBody(
+                [
+                    '$this->' . $value['name'] . ' = $' . $value['name'] . ';'
+                ], 
+                [
+                    $value['typeHint']
+                ]
+            );
             //---- end of getter method
 
             //---- begin of setter method
@@ -72,7 +79,11 @@ class DTOGeneratorExample extends AbstractExample
             $setterMethod->setDocumentation($documentationFactory->create());
             $setterMethod->addParameter($value['name'], null, $value['typeHint']);
             $setterMethod->setName('set' . ucfirst($value['name']));
-            $setterMethod->setBody(array('return $this->' . $value['name'] . ';'));
+            $setterMethod->setBody(
+                [
+                    'return $this->' . $value['name'] . ';'
+                ]
+            );
             //---- end of setter method
 
             $class->addProperty($property);

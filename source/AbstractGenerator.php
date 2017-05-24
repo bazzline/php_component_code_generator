@@ -22,11 +22,11 @@ abstract class AbstractGenerator extends AbstractBasicGenerator implements Block
     private $lineGenerator;
 
     /** @var array */
-    private $properties = array();
+    private $properties = [];
 
     public function __construct()
     {
-        $this->properties = array();
+        $this->properties = [];
     }
 
     /**
@@ -34,7 +34,7 @@ abstract class AbstractGenerator extends AbstractBasicGenerator implements Block
      */
     public function clear()
     {
-        $this->properties = array();
+        $this->properties = [];
         $this->resetContent();
     }
 
@@ -119,7 +119,7 @@ abstract class AbstractGenerator extends AbstractBasicGenerator implements Block
         if ($isStackable) {
             if ((!isset($this->properties[$name]))
                 || (!is_array($this->properties[$name]))) {
-                $this->properties[$name] = array();
+                $this->properties[$name] = [];
             }
             $this->properties[$name][] = $value;
         } else {
@@ -229,7 +229,15 @@ abstract class AbstractGenerator extends AbstractBasicGenerator implements Block
      */
     final protected function getNotPrintableTypeHints()
     {
-        return array('bool', 'boolean', 'int', 'integer', 'object', 'resource', 'string');
+        return [
+            'bool', 
+            'boolean', 
+            'int', 
+            'integer', 
+            'object', 
+            'resource', 
+            'string'
+        ];
     }
 
     /**

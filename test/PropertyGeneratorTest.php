@@ -100,7 +100,7 @@ class PropertyGeneratorTest extends GeneratorTestCase
     public function testWithManuallyDocumentation()
     {
         $documentation = $this->getDocumentationGenerator();
-        $documentation->setVariable('unitTest', array('string'));
+        $documentation->setVariable('unitTest', ['string']);
         $generator = $this->getPropertyGenerator();
 
         $generator->setDocumentation($documentation, false);
@@ -147,13 +147,13 @@ class PropertyGeneratorTest extends GeneratorTestCase
         $generator->markAsPublic();
         $generator->addTypeHint('array');
         $generator->setName('unitTest');
-        $generator->setValue('array(1,2)');
+        $generator->setValue('[1,2]');
 
         $expectedString =
             '/**' . PHP_EOL .
             ' * @var array $unitTest' . PHP_EOL .
             ' */' . PHP_EOL .
-            'public $unitTest = array(1,2);';
+            'public $unitTest = [1,2];';
 
         $this->assertEquals($expectedString, $generator->generate());
     }

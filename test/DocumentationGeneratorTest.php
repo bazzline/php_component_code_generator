@@ -85,9 +85,9 @@ class DocumentationGeneratorTest extends GeneratorTestCase
     public function testWithParameters()
     {
         $generator = $this->getDocumentationGenerator();
-        $generator->addParameter('bar', array('Bar'));
-        $generator->addParameter('foo', array('Foo'));
-        $generator->addParameter('fooBar', array('Foo', 'Bar'), 'there is no foo without a bar');
+        $generator->addParameter('bar', ['Bar']);
+        $generator->addParameter('foo', ['Foo']);
+        $generator->addParameter('fooBar', ['Foo', 'Bar'], 'there is no foo without a bar');
 
         $expectedString =
             '/**' . PHP_EOL .
@@ -102,7 +102,7 @@ class DocumentationGeneratorTest extends GeneratorTestCase
     public function testWithReturn()
     {
         $generator = $this->getDocumentationGenerator();
-        $generator->setReturn(array('Foo', 'Bar'), 'there is no foo without a bar');
+        $generator->setReturn(['Foo', 'Bar'], 'there is no foo without a bar');
 
         $expectedString =
             '/**' . PHP_EOL .
@@ -159,7 +159,7 @@ class DocumentationGeneratorTest extends GeneratorTestCase
     public function testWithVariable()
     {
         $generator = $this->getDocumentationGenerator();
-        $generator->setVariable('foobar', array('Bar', 'Foo'));
+        $generator->setVariable('foobar', ['Bar', 'Foo']);
 
         $expectedString =
             '/**' . PHP_EOL .
@@ -176,17 +176,17 @@ class DocumentationGeneratorTest extends GeneratorTestCase
         $generator->addComment('Bar');
         $generator->setClass('UnitTest');
         $generator->setPackage('Unit\Test');
-        $generator->addParameter('bar', array('Bar'));
-        $generator->addParameter('foo', array('Foo'));
-        $generator->addParameter('fooBar', array('Foo', 'Bar'), 'there is no foo without a bar');
-        $generator->setReturn(array('Foo', 'Bar'), 'there is no foo without a bar');
+        $generator->addParameter('bar', ['Bar']);
+        $generator->addParameter('foo', ['Foo']);
+        $generator->addParameter('fooBar', ['Foo', 'Bar'], 'there is no foo without a bar');
+        $generator->setReturn(['Foo', 'Bar'], 'there is no foo without a bar');
         $generator->addSee('https://artodeto@bazzline.net');
         $generator->addSee('https://github.com/stevleibelt');
         $generator->addThrows('BarException');
         $generator->addThrows('FooException');
         $generator->addTodoS('implement bar exception');
         $generator->addTodoS('implement foo exception');
-        $generator->setVariable('foobar', array('Bar', 'Foo'));
+        $generator->setVariable('foobar', ['Bar', 'Foo']);
 
         $expectedString =
             '/**' . PHP_EOL .
