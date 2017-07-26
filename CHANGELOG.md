@@ -31,6 +31,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
+## [1.2.1](https://github.com/bazzline/php_component_code_generator/tree/1.2.1) - released at 2017-07-26
+
+### Changed
+
+* fixed broken composer.json
+
 ## [1.2.0](https://github.com/bazzline/php_component_code_generator/tree/1.2.0) - released at 2017-05-24
 
 ### Added
