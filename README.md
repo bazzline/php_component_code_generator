@@ -1,3 +1,7 @@
+# Full Stop
+
+I still like the idea but there is currently no use case to develop it anymore.
+
 # PHP Code Generator
 
 This project aims to deliver a easy to use free as in freedom php code generator.
